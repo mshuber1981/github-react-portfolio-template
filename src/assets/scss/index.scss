@@ -1,0 +1,404 @@
+@font-face {
+  font-family: "Permanent Marker";
+  src: local("Permanent Marker"),
+    url(../fonts/PermanentMarker-Regular.ttf) format("cursive");
+}
+@import "./theme.scss";
+// https://eduardoboucas.github.io/include-media/
+@import "~include-media/dist/_include-media.scss";
+// https://create-react-app.dev/docs/adding-bootstrap
+@import "~bootstrap/scss/bootstrap";
+
+/* General
+************************************************************** */
+body {
+  background-color: black;
+}
+h2 {
+  font-family: "Permanent Marker";
+  font-size: 4rem;
+}
+a:hover {
+  text-decoration: none;
+  cursor: pointer;
+}
+hr {
+  border: 0.1rem solid $reactBlue;
+  background-color: $reactBlue;
+  margin: 2rem auto 2rem auto;
+}
+.scroll,
+.social-links {
+  font-size: 2.5rem;
+}
+#error {
+  color: $reactBlue;
+}
+
+/* Theme
+************************************************************** */
+.dark {
+  @include darkTheme();
+}
+.light {
+  @include lightTheme();
+}
+
+/* Animations
+************************************************************** */
+.loading {
+  position: relative;
+}
+.loading::before {
+  content: "Loading...";
+  position: absolute;
+  color: $reactBlue;
+  overflow: hidden;
+  border-right: 4px solid $reactBlue;
+  animation: loading 5s linear infinite;
+}
+@keyframes loading {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 100%;
+  }
+  100% {
+    width: 0;
+  }
+}
+.logo {
+  animation: spin infinite 20s linear;
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.card:hover {
+  animation: bounce 1s;
+}
+@keyframes bounce {
+  0%,
+  20%,
+  60%,
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  40% {
+    -webkit-transform: translateY(-20px);
+    transform: translateY(-20px);
+  }
+
+  80% {
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
+  }
+}
+
+/* About
+************************************************************** */
+#about {
+  button {
+    background-color: $reactBlue;
+  }
+  .nav-item {
+    .active {
+      color: $reactBlue !important;
+    }
+  }
+  .logo {
+    height: 40vmin;
+    pointer-events: none;
+  }
+  h1 {
+    font-family: "Permanent Marker";
+    font-size: 5rem;
+  }
+  p {
+    font-size: 1.5rem;
+  }
+  .scroll {
+    color: $reactBlue;
+    #scroll-down {
+      margin-top: 5rem;
+    }
+  }
+}
+
+/* Skills
+************************************************************** */
+#skills {
+  figure {
+    margin-top: 1.5rem;
+    figcaption {
+      margin-top: 0.5rem;
+      font-size: 1.5rem;
+    }
+  }
+}
+
+/* Projects
+************************************************************** */
+#projects {
+  .card {
+    border: 2px solid $reactBlue;
+    background-color: #292b2c;
+    img {
+      padding: 1rem;
+      max-height: 15rem;
+    }
+    .card-title {
+      text-decoration: underline;
+      text-decoration-color: $reactBlue;
+    }
+  }
+}
+
+/* Contact
+************************************************************** */
+#contact {
+  img,
+  h3 {
+    margin-top: 1rem;
+  }
+  min-height: 90vh;
+  img {
+    border: 0.2rem solid $reactBlue;
+    border-radius: 50%;
+    width: 60%;
+    height: auto;
+  }
+  span {
+    color: $reactBlue;
+  }
+  .scroll {
+    color: $reactBlue;
+    #scroll-up {
+      margin-top: 15rem;
+    }
+  }
+}
+
+/* Footer
+************************************************************** */
+footer {
+  a {
+    color: white;
+  }
+  span {
+    color: red;
+  }
+  #myInfo {
+    color: $reactBlue;
+  }
+}
+
+/* Media Queries
+************************************************************** */
+// iPhones
+@include media(">=phone", "<tablet") {
+  h2 {
+    font-size: 2.75rem;
+  }
+  hr {
+    margin: 0.5rem auto 0.5rem auto;
+  }
+  .scroll,
+  .social-links {
+    font-size: 2rem;
+  }
+  .app-error {
+    h1 {
+      font-size: 1.5rem;
+    }
+  }
+  #about {
+    h1 {
+      font-size: 2.75rem;
+    }
+    p {
+      font-size: 1rem;
+    }
+    .scroll {
+      #scroll-down {
+        margin-top: 2.5rem;
+      }
+    }
+  }
+  #skills {
+    figure {
+      margin-top: 0.75rem;
+      figcaption {
+        margin-top: 0.25rem;
+        font-size: 1rem;
+      }
+    }
+  }
+  #projects {
+    h2 {
+      margin-top: 4.25rem;
+    }
+  }
+  #contact {
+    h2 {
+      margin-top: 3.25rem;
+    }
+    img {
+      width: 45%;
+    }
+    .scroll {
+      #scroll-up {
+        margin-top: 3rem;
+      }
+    }
+  }
+}
+// iPhones landscape
+@include media(">=phone", "<tablet", "landscape") {
+  #about {
+    .logo {
+      display: none;
+    }
+    h1 {
+      margin-top: 2.5rem;
+    }
+    .scroll {
+      #scroll-down {
+        margin-top: 0.5rem;
+      }
+    }
+  }
+  #skills {
+    h2 {
+      margin-top: 4.75rem;
+    }
+  }
+  #contact {
+    h2 {
+      margin-top: 4.25rem;
+    }
+    img {
+      width: 32%;
+      margin-top: 0;
+    }
+    .scroll {
+      #scroll-up {
+        margin: 2rem 0 2rem 0;
+      }
+    }
+  }
+}
+// iPhone X landscape
+@include media(">=tablet", "<desktop", "landscape") {
+  h2 {
+    font-size: 2.75rem;
+  }
+  hr {
+    margin: 0.5rem auto 0.5rem auto;
+  }
+  .scroll,
+  .social-links {
+    font-size: 2rem;
+  }
+  .app-error {
+    h1 {
+      font-size: 1.5rem;
+    }
+  }
+  #about {
+    .logo {
+      display: none;
+    }
+    h1 {
+      font-size: 2.75rem;
+      margin-top: 1.5rem;
+    }
+    p {
+      font-size: 1rem;
+    }
+    .scroll {
+      #scroll-down {
+        margin-top: 2.5rem;
+      }
+    }
+  }
+  #skills {
+    h2 {
+      margin-top: 4.75rem;
+    }
+    figure {
+      margin-top: 0.75rem;
+      figcaption {
+        margin-top: 0.25rem;
+        font-size: 1rem;
+      }
+    }
+  }
+  #projects {
+    h2 {
+      margin-top: 4.25rem;
+    }
+  }
+  #contact {
+    h2 {
+      margin-top: 4.25rem;
+    }
+    img {
+      width: 32%;
+      margin-top: 0;
+    }
+    .scroll {
+      #scroll-up {
+        margin: 2rem 0 2rem 0;
+      }
+    }
+  }
+}
+// iPad
+@include media(">=tablet", "<desktop") {
+  #about {
+    h1 {
+      font-size: 4rem;
+    }
+  }
+  #contact {
+    img {
+      width: 35%;
+    }
+    .scroll {
+      #scroll-up {
+        margin-top: 6rem;
+      }
+    }
+  }
+}
+// iPad Landscape
+@include media(">tablet", "<=desktop", "landscape") {
+  hr {
+    margin: 0.5rem auto 0.5rem auto;
+  }
+  #about {
+    h1 {
+      font-size: 4rem;
+    }
+    .scroll {
+      #scroll-down {
+        margin-top: 1rem;
+      }
+    }
+  }
+  #contact {
+    .scroll {
+      #scroll-up {
+        margin-top: 5rem;
+      }
+    }
+  }
+}
