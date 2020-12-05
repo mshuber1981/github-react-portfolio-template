@@ -161,7 +161,7 @@ A helpful guide for Create React App deployments with GitHub Pages can be found 
 
 ## Donate
 
-Was this helpful? Feeling generous? Please consider donating below or sponsoring this project.
+Was this helpful? Feeling generous? Please consider donating below.
 
 My [Coinbase](https://www.coinbase.com/) Bitcoin wallet address:
 
