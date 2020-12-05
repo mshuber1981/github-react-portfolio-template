@@ -93,7 +93,7 @@ Add your GitHub username once and all of your info will automatically be updated
   ];
   ```
 
-1. Import the project images you want to use (data.js line 14), skip steps 2-3 if you want to use the default image
+1. Import the projects images you want to use (data.js line 14), skip steps 2-3 if you want to use the default image
 
 - ```javascript
   // Projects Images
@@ -165,7 +165,11 @@ Was this helpful? Feeling generous? Please consider donating below.
 
 My [Coinbase](https://www.coinbase.com/) Bitcoin wallet address:
 
-![Donate](/images/donate.png)
+![Bitcoin](/images/donate.png)
+
+[Venmo](https://venmo.com/)
+
+![Venmo](/images/venmo.JPG)
 
 ## License
 
