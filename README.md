@@ -161,15 +161,11 @@ A helpful guide for Create React App deployments with GitHub Pages can be found 
 
 ## Donate
 
-Was this helpful? Feeling generous? Please consider donating below.
+Was this helpful? Feeling generous? Please consider donating below or sponsoring this project.
 
 My [Coinbase](https://www.coinbase.com/) Bitcoin wallet address:
 
-![Bitcoin](/images/donate.png)
-
-[Venmo](https://venmo.com/)
-
-![Venmo](/images/venmo.JPG)
+![Bitcoin](/images/bitcoin.png)
 
 ## License
 
