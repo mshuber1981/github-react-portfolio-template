@@ -171,4 +171,4 @@ My [Coinbase](https://www.coinbase.com/) Bitcoin wallet address:
 
 ## License
 
-[MIT](https://choosealicense.com/licenses/mit/)
+[MIT](https://choosealicense.com/licenses/mit/) Back to top
