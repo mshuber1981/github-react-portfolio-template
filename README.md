@@ -167,7 +167,7 @@ My [Coinbase](https://www.coinbase.com/) Bitcoin wallet address:
 
 ![Bitcoin](/images/bitcoin.png)
 
-[⬆](#github-react-portfolio-template) Back to top
+[⬆ Back to top](#github-react-portfolio-template)
 
 ## License
 
