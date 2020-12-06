@@ -167,8 +167,8 @@ My [Coinbase](https://www.coinbase.com/) Bitcoin wallet address:
 
 ![Bitcoin](/images/bitcoin.png)
 
-[⬆](#github-react-portfolio-template)
+[⬆](#github-react-portfolio-template) Back to top
 
 ## License
 
-[MIT](https://choosealicense.com/licenses/mit/) Back to top
+[MIT](https://choosealicense.com/licenses/mit/)
