@@ -1,6 +1,6 @@
 // https://www.npmjs.com/package/react-scroll
 import { Link } from "react-scroll";
-// https://react-icons.netlify.com/#/
+// https://react-icons.github.io/react-icons/
 import { FaChevronCircleDown } from "react-icons/fa";
 import NavBar from "../containers/NavBar";
 import SocialLinks from "./SocialLinks";
