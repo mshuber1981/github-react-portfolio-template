@@ -70,7 +70,6 @@ Add your GitHub username once and all of your info will automatically be updated
     {
       id: 1,
       skill: <FaHtml5 className="display-4" />,
-      nameId: 1,
       name: "HTML5",
     },
   ```
