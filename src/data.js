@@ -27,55 +27,46 @@ export const skillData = [
   {
     id: 1,
     skill: <FaHtml5 className="display-4" />,
-    nameId: 1,
     name: "HTML5",
   },
   {
     id: 2,
     skill: <FaCss3Alt className="display-4" />,
-    nameId: 2,
     name: "CSS3",
   },
   {
     id: 3,
     skill: <SiJavascript className="display-4" />,
-    nameId: 3,
     name: "JavaScript",
   },
   {
     id: 4,
     skill: <FaSass className="display-4" />,
-    nameId: 4,
     name: "Sass",
   },
   {
     id: 5,
     skill: <FaBootstrap className="display-4" />,
-    nameId: 5,
     name: "Bootstrap",
   },
   {
     id: 6,
     skill: <FaReact className="display-4" />,
-    nameId: 6,
     name: "React",
   },
   {
     id: 7,
     skill: <FaNpm className="display-4" />,
-    nameId: 7,
     name: "npm",
   },
   {
     id: 8,
     skill: <FaGitAlt className="display-4" />,
-    nameId: 8,
     name: "Git",
   },
   {
     id: 9,
     skill: <FaGithubSquare className="display-4" />,
-    nameId: 9,
     name: "GitHub",
   },
 ];

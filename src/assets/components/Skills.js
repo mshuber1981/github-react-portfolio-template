@@ -13,7 +13,7 @@ const Skills = ({ theme }) => {
             return (
               <figure className="col" key={skills.id}>
                 {skills.skill}
-                <figcaption key={skills.nameId}>{skills.name}</figcaption>
+                <figcaption>{skills.name}</figcaption>
               </figure>
             );
           })}
