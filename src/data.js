@@ -84,15 +84,12 @@ export const filteredProjects = [
 // There MUST be one image per repo above or the defualt image will be applied
 export const projectData = [
   {
-    imageId: 1,
     image: colors,
   },
   {
-    imageId: 2,
     image: react,
   },
   {
-    imageId: 3,
     image: notepad,
   },
 ];

@@ -49,18 +49,10 @@ const Projects = ({ theme, githubUsername }) => {
             for (let i = 0; i < projectData.length; i++) {
               newData[i].imageInfo = projectData[i];
             }
-          } else {
-            for (let i = 0; i < newData.length; i++) {
-              newData[i].imageId = i;
-            }
           }
           setData(newData);
           setIsLoading(false);
         } else {
-          let newData = data.slice();
-          for (let i = 0; i < newData.length; i++) {
-            newData[i].imageId = i;
-          }
           setData(data);
           setIsLoading(false);
         }
@@ -86,26 +78,21 @@ const Projects = ({ theme, githubUsername }) => {
           <h2>Projects</h2>
           <hr />
           <CardColumns>
-            {data.map((projects, index) => {
+            {data.map((projects) => {
               return (
-                <Card key={index}>
+                <Card key={projects.id}>
                   <Card.Img
-                    key={projects.imageInfo.imageId}
                     variant="top"
                     src={projects.imageInfo.image}
                     alt="Project Image"
                   />
-                  <Card.Body key={projects.id}>
+                  <Card.Body>
                     <a
-                      key={projects.node_id}
                       href={projects.html_url}
                       target="_blank"
                       rel="noreferrer"
                     >
-                      <Card.Title
-                        className="d-inline-block"
-                        key={projects.full_name}
-                      >
+                      <Card.Title className="d-inline-block">
                         {projects.name}
                       </Card.Title>
                     </a>
@@ -125,25 +112,13 @@ const Projects = ({ theme, githubUsername }) => {
         <h2>Projects</h2>
         <hr />
         <CardColumns>
-          {data.map((projects, index) => {
+          {data.map((projects) => {
             return (
-              <Card key={index}>
-                <Card.Img
-                  key={projects.imageId}
-                  variant="top"
-                  src={defualtImage}
-                />
-                <Card.Body key={projects.id}>
-                  <a
-                    key={projects.node_id}
-                    href={projects.html_url}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <Card.Title
-                      className="d-inline-block"
-                      key={projects.full_name}
-                    >
+              <Card key={projects.id}>
+                <Card.Img variant="top" src={defualtImage} />
+                <Card.Body>
+                  <a href={projects.html_url} target="_blank" rel="noreferrer">
+                    <Card.Title className="d-inline-block">
                       {projects.name}
                     </Card.Title>
                   </a>
