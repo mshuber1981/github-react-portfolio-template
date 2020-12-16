@@ -1,7 +1,6 @@
 @font-face {
   font-family: "Permanent Marker";
-  src: local("Permanent Marker"),
-    url(../fonts/PermanentMarker-Regular.ttf) format("cursive");
+  src: local("Permanent Marker"), url(../fonts/PermanentMarker-Regular.ttf);
 }
 @import "./theme.scss";
 // https://eduardoboucas.github.io/include-media/
