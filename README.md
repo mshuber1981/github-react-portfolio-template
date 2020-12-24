@@ -146,7 +146,7 @@ A helpful guide for Create React App deployments with GitHub Pages can be found 
 1. Update the homepage value in package.json (line 3)
 
    - ```javascript
-     "homepage": "https://myusername.github.io/my-app",
+     "homepage": "https://myusername.github.io/my-app/",
      ```
 
 1. Run the deployment command
