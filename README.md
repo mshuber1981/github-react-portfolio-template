@@ -29,7 +29,7 @@ Add your GitHub username once and all of your info will automatically be updated
    - ```javascript
      /* START HERE - add your GitHub username below
       ************************************************************** */
-     export const githubUsername = "your GitHub username here";
+     export const githubUsername = "Your GitHub username here";
      ```
 
 1. Start the development server to view the results
@@ -146,7 +146,7 @@ A helpful guide for Create React App deployments with GitHub Pages can be found 
 1. Update the homepage value in package.json (line 3)
 
    - ```javascript
-     "homepage": "https://myusername.github.io/my-app/",
+     "homepage": "https://yourusername.github.io/your-app/",
      ```
 
 1. Run the deployment command
