@@ -113,7 +113,7 @@ hr {
     }
   }
   .logo {
-    height: 40vmin;
+    height: 33vmin;
     pointer-events: none;
   }
   h1 {
@@ -163,6 +163,9 @@ hr {
 /* Contact
 ************************************************************** */
 #contact {
+  h2 {
+    margin-top: 3rem;
+  }
   img,
   h3 {
     margin-top: 1rem;
@@ -180,7 +183,7 @@ hr {
   .scroll {
     color: $reactBlue;
     #scroll-up {
-      margin-top: 15rem;
+      margin: 5rem 0 1rem 0;
     }
   }
 }
@@ -281,7 +284,7 @@ footer {
   }
   #contact {
     h2 {
-      margin-top: 4.25rem;
+      margin-top: 3.8rem;
     }
     img {
       width: 32%;
@@ -290,6 +293,24 @@ footer {
     .scroll {
       #scroll-up {
         margin: 2rem 0 2rem 0;
+      }
+    }
+  }
+}
+// iPad
+@include media(">=tablet", "<desktop") {
+  #about {
+    h1 {
+      font-size: 4rem;
+    }
+  }
+  #contact {
+    img {
+      width: 35%;
+    }
+    .scroll {
+      #scroll-up {
+        margin-top: 6rem;
       }
     }
   }
@@ -347,33 +368,15 @@ footer {
   }
   #contact {
     h2 {
-      margin-top: 4.25rem;
+      margin-top: 3.5rem;
     }
     img {
-      width: 32%;
+      width: 33%;
       margin-top: 0;
     }
     .scroll {
       #scroll-up {
         margin: 2rem 0 2rem 0;
-      }
-    }
-  }
-}
-// iPad
-@include media(">=tablet", "<desktop") {
-  #about {
-    h1 {
-      font-size: 4rem;
-    }
-  }
-  #contact {
-    img {
-      width: 35%;
-    }
-    .scroll {
-      #scroll-up {
-        margin-top: 6rem;
       }
     }
   }
