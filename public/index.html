@@ -8,7 +8,10 @@
     <meta property="og:title" content="GitHub React Portfolio Template" />
     <meta property="og:description" content="Made with ♥️ by Michael Huber" />
     <meta property="og:image" content="%PUBLIC_URL%/react.jpeg" />
-    <meta property="og:url" content="https://mshuber1981.github.io/github-react-portfolio-template" />
+    <meta
+      property="og:url"
+      content="https://mshuber1981.github.io/github-react-portfolio-template"
+    />
     <meta name="twitter:card" content="summary_large_image" />
     <meta property="og:site_name" content="github.com/mshuber1981" />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
@@ -43,17 +46,24 @@
     -->
     <script>
       function copyCheck() {
-        setTimeout(function () { 
+        setTimeout(function () {
           if (document.getElementById("myInfo") === null) {
-            alert("Please consider keeping my info in the Footer.\nMichael Huber - github.com/mshuber1981")
-          } else if (document.getElementById("myInfo").innerText === null || document.getElementById("myInfo").innerText !== "Michael Huber" ) {
-            alert("Please consider keeping my info in the Footer.\nMichael Huber - github.com/mshuber1981")
+            alert(
+              "Please consider keeping my info in the Footer.\nMichael Huber - github.com/mshuber1981"
+            );
+          } else if (
+            document.getElementById("myInfo").innerText === null ||
+            document.getElementById("myInfo").innerText !== "Michael Huber"
+          ) {
+            alert(
+              "Please consider keeping my info in the Footer.\nMichael Huber - github.com/mshuber1981"
+            );
           } else {
             return;
           }
         }, 30000);
       }
-      copyCheck();  
+      copyCheck();
     </script>
   </body>
 </html>
