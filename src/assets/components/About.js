@@ -22,7 +22,7 @@ const About = ({ theme, setTheme, githubUrl, name, link, bio, twitter }) => {
       <NavBar theme={theme} setTheme={setTheme} />
       <div className="container text-center">
         <img
-          className="logo spin"
+          className="logo spin img-fluid"
           src={logo}
           alt="React Logo"
           height="45%"
