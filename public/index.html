@@ -44,26 +44,5 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
-    <script>
-      function copyCheck() {
-        setTimeout(function () {
-          if (document.getElementById("myInfo") === null) {
-            alert(
-              "Please consider keeping my info in the Footer.\nMichael Huber - github.com/mshuber1981"
-            );
-          } else if (
-            document.getElementById("myInfo").innerText === null ||
-            document.getElementById("myInfo").innerText !== "Michael Huber"
-          ) {
-            alert(
-              "Please consider keeping my info in the Footer.\nMichael Huber - github.com/mshuber1981"
-            );
-          } else {
-            return;
-          }
-        }, 30000);
-      }
-      copyCheck();
-    </script>
   </body>
 </html>
