@@ -155,14 +155,6 @@ A helpful guide for Create React App deployments with GitHub Pages can be found 
      npm run deploy
      ```
 
-## Donate
-
-Was this helpful? Feeling generous? Please consider donating below.
-
-My [Coinbase](https://www.coinbase.com/) Bitcoin wallet address:
-
-![Bitcoin](/images/bitcoin.png)
-
 [Back to top ⬆](#github-react-portfolio-template)
 
 ## License
