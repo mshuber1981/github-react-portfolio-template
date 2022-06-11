@@ -8,11 +8,11 @@ Add your GitHub username once and all of your info will automatically be updated
 
 [Google PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/)
 
-![Page Speed](/images/speed.png)
+![Page Speed](/README_images/speed.png)
 
 ### <a href="https://mshuber1981.github.io/github-react-portfolio-template/">LIVE DEMO</a>
 
-![Project Preview](/images/preview.png)
+![Project Preview](/README_images/preview.png)
 
 ## Getting Started
 
@@ -57,7 +57,7 @@ Add your GitHub username once and all of your info will automatically be updated
 
 ## Updating the Skills section
 
-![Skills Preview](/images/skills.png)
+![Skills Preview](/README_images/skills.png)
 
 1. Import your desired skill icons (data.js line 1-11)
 
@@ -92,7 +92,7 @@ Add your GitHub username once and all of your info will automatically be updated
 
 ## Updating the Projects section
 
-![Projects Preview](/images/projects.png)
+![Projects Preview](/README_images/projects.png)
 
 1. Follow the instructions to update the filteredProjects array (data.js lines 94-98)
 
@@ -128,7 +128,7 @@ Add your GitHub username once and all of your info will automatically be updated
 
 ## Updating the Contact section
 
-![Contact Preview](/images/contact.png)
+![Contact Preview](/README_images/contact.png)
 
 1. The contact form uses [Formspree](https://formspree.io/), create an account and add your endpoint URL (data.js lines 108-113)
 
@@ -157,7 +157,7 @@ A helpful guide for Create React App deployments with GitHub Pages can be found 
      npm run deploy
      ```
 
-[Back to top ⬆](#github-react-portfolio-template)
+[Back to top :top:](#github-react-portfolio-template)
 
 ## License
 
