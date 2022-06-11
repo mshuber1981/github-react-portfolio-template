@@ -1,28 +1,45 @@
-// https://react-icons.github.io/react-icons/
+// Skills icons - https://react-icons.github.io/react-icons/
 import {
   FaHtml5,
   FaCss3Alt,
-  FaSass,
   FaBootstrap,
   FaReact,
-  FaNpm,
   FaGitAlt,
   FaGithubSquare,
+  FaLink,
 } from "react-icons/fa";
-import { SiJavascript } from "react-icons/si";
+import { SiJavascript, SiStyledcomponents, SiRedux } from "react-icons/si";
 
-// Projects Images (add your images to the /assets/images directory and import below)
-import colors from "./assets/images/colors.svg";
-import react from "./assets/images/logo.svg";
-import notepad from "./assets/images/notepad.svg";
+// Projects Images (add your images to the /images directory and import below)
+import Logo from "./images/logo.svg";
 
-/* START HERE - add your GitHub username below
- ************************************************************** */
+// Hero Images (add your images to the /images directory with the same names)
+import HeroLight from "./images/hero-light.jpg";
+import HeroDark from "./images/hero-dark.jpg";
+// If you change the import names above then you need to change the export names below
+export { HeroLight as Light };
+export { HeroDark as Dark };
+
+/* START HERE
+ **************************************************************
+  Add your GitHub username below.
+*/
 export const githubUsername = "Your GitHub username here";
 
+// Blog/alternate link icon
+export const Blog = <FaLink />;
+
+/* About Me
+ **************************************************************
+  Add a second paragraph for the about me section.
+*/
+export const moreInfo =
+  "I enjoy learning about technology and helping others use it to improve their lives and be more productive. I built this site with React, Bootstrap, Redux, and the GitHub REST API.";
+
 /* Skills
- ************************************************************** */
-// Add or remove skills in the SAME format below, there must be one icon imported above per skill below and 3 skills per row
+ ************************************************************** 
+  Add or remove skills in the SAME format below, there must be one icon imported above per skill below.
+*/
 export const skillData = [
   {
     id: 1,
@@ -41,23 +58,23 @@ export const skillData = [
   },
   {
     id: 4,
-    skill: <FaSass className="display-4" />,
-    name: "Sass",
+    skill: <FaBootstrap className="display-4" />,
+    name: "BootStrap",
   },
   {
     id: 5,
-    skill: <FaBootstrap className="display-4" />,
-    name: "Bootstrap",
-  },
-  {
-    id: 6,
     skill: <FaReact className="display-4" />,
     name: "React",
   },
   {
+    id: 6,
+    skill: <SiStyledcomponents className="display-4" />,
+    name: "Styled Components",
+  },
+  {
     id: 7,
-    skill: <FaNpm className="display-4" />,
-    name: "npm",
+    skill: <SiRedux className="display-4" />,
+    name: "Redux",
   },
   {
     id: 8,
@@ -71,35 +88,26 @@ export const skillData = [
   },
 ];
 
-/* Projects
- ************************************************************** */
-// List the repo names you want to include (they will be sorted alphabetically), leave the array empty if you want to include everything
-export const filteredProjects = [
-  "Background-Generator",
-  "github-react-portfolio-template",
-  "notepad",
-];
+// Resume link - I am using CloudFront to share my resume (https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Introduction.html)
+export const resume = null;
 
-// List the card images you want to include in the same order as the repos above (alphabetically)
-// There MUST be one image per repo above or the defualt image will be applied
-export const projectData = [
+/* Projects
+ ************************************************************** 
+  List the repo names (string - "your-repo-name") you want to include (they will be sorted alphabetically). If empty, only the first 3 will be included.
+*/
+export const filteredProjects = ["example-1", "example-2", "example-3"];
+
+// Replace the defualt GitHub image for matching repos below (images imported above - lines 13-14)
+export const projectCardImages = [
   {
-    image: colors,
-  },
-  {
-    image: react,
-  },
-  {
-    image: notepad,
+    name: "example-1",
+    image: Logo,
   },
 ];
 
 /* Contact Info
- ************************************************************** */
-// Share the contact info you are comfortable with (no dashes for phone numbers)
-// If no info provided a button with a link to mailchimp will be rendered, update the link if you want to use this option
-export const contactInfo = {
-  email: "",
-  phone: "",
-  mailChimp: "https://www.mailchimp.com/",
-};
+ ************************************************************** 
+  Add your formspree endpoint below.
+  https://formspree.io/
+*/
+export const formspreeUrl = "https://formspree.io/f/YourEndpoint";

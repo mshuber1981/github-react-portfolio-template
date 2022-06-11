@@ -1,6 +1,6 @@
 {
-  "short_name": "GitHub Portfolio",
-  "name": "GitHub React Portfolio Template",
+  "short_name": "Portfolio",
+  "name": "My React Portfolio",
   "icons": [
     {
       "src": "favicon.ico",
@@ -16,6 +16,12 @@
       "src": "logo512.png",
       "type": "image/png",
       "sizes": "512x512"
+    },
+    {
+      "src": "maskable_icon.png",
+      "type": "image/png",
+      "sizes": "240x240",
+      "purpose": "any maskable"
     }
   ],
   "start_url": ".",

@@ -2,7 +2,7 @@
 
 # GitHub React Portfolio Template
 
-A fast, responsive React portfolio template that uses the [GitHub REST API](https://docs.github.com/en/free-pro-team@latest/rest).
+A performant, accessible, progressive React portfolio template that uses the [GitHub REST API](https://docs.github.com/en/free-pro-team@latest/rest).
 
 Add your GitHub username once and all of your info will automatically be updated. Deploy to GitHub pages in a few simple steps.
 
@@ -16,19 +16,23 @@ Add your GitHub username once and all of your info will automatically be updated
 
 ## Getting Started
 
-1. Clone/download
-1. Install the dependencies
+1. [Create a repository from this template](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template)
+1. [Clone your repostiory](https://developers.google.com/speed/pagespeed/insights/)
+1. Make sure [Node](https://nodejs.org/en/) is installed
+1. Open your project and install the dependencies
 
    - ```bash
-     npm i
+     npm install
      ```
 
 1. Navigate to the src directory and open data.js
-1. Add your GitHub username (data.js line 19)
+1. Add your GitHub username (data.js lines 23-27)
 
    - ```javascript
-     /* START HERE - add your GitHub username below
-      ************************************************************** */
+     /* START HERE
+      ************************************************************** 
+      Add your GitHub username below.
+     */
      export const githubUsername = "Your GitHub username here";
      ```
 
@@ -38,61 +42,69 @@ Add your GitHub username once and all of your info will automatically be updated
      npm start
      ```
 
+## Updating the Hero images
+
+1. Update the image imports/exports (data.js line 16-21)
+
+   - ```javascript
+     // Hero Images (add your images to the /images directory with the same names)
+     import HeroLight from "./images/hero-light.jpg";
+     import HeroDark from "./images/hero-dark.jpg";
+     // If you change the import names above then you need to change the export names below
+     export { HeroLight as Light };
+     export { HeroDark as Dark };
+     ```
+
 ## Updating the Skills section
 
 ![Skills Preview](/images/skills.png)
 
-1. Import your desired skill icons (data.js line 1)
+1. Import your desired skill icons (data.js line 1-11)
 
    - ```javascript
-     // https://react-icons.github.io/
+     // Skills icons - https://react-icons.github.io/react-icons/
      import {
        FaHtml5,
        FaCss3Alt,
-       FaSass,
        FaBootstrap,
        FaReact,
-       FaNpm,
        FaGitAlt,
        FaGithubSquare,
+       FaLink,
      } from "react-icons/fa";
-     import { SiJavascript } from "react-icons/si";
+     import { SiJavascript, SiStyledcomponents, SiRedux } from "react-icons/si";
      ```
 
-1. Follow the instructions to update the skillData array (data.js line 23)
+1. Follow the instructions to update the skillData array (data.js line 39-89)
 
    - ```javascript
      /* Skills
-     ************************************************************** */
-     // Add or remove skills in the SAME format below
-     // There must be one icon imported above per skill below and 3 skills per row
+      **************************************************************
+      Add or remove skills in the SAME format below, there must be one icon imported above per skill below.
+     */
      export const skillData = [
-       {
-         id: 1,
-         skill: <FaHtml5 className="display-4" />,
-         name: "HTML5",
-       },
+      {
+       id: 1,
+       skill: <FaHtml5 className="display-4" />,
+       name: "HTML5",
+      },
      ```
 
 ## Updating the Projects section
 
 ![Projects Preview](/images/projects.png)
 
-1. Follow the instructions to update the filteredProjects array (data.js line 83)
+1. Follow the instructions to update the filteredProjects array (data.js lines 94-98)
 
    - ```javascript
      /* Projects
-      ************************************************************** */
-     // List the repo names you want to include (they will be sorted alphabetically)
-     // Leave the array empty if you want to include everything
-     export const filteredProjects = [
-       "Background-Generator",
-       "github-react-portfolio-template",
-       "notepad",
-     ];
+      ************************************************************** 
+      List the repo names (string - "your-repo-name") you want to include (they will be sorted alphabetically). If empty, only the first 3 will be included.
+     */
+     export const filteredProjects = ["example-1", "example-2", "example-3"];
      ```
 
-1. Import the projects images you want to use (data.js line 14), skip steps 2-3 if you want to use the default image
+1. Import the projects images you want to use (data.js lines 13-14) or a default image will be applied
 
    - ```javascript
      // Projects Images
@@ -102,20 +114,14 @@ Add your GitHub username once and all of your info will automatically be updated
      import notepad from "./assets/images/notepad.svg";
      ```
 
-1. Follow the instructions to update the projectData array (data.js line 92)
+1. Follow the instructions to update the projectData array (data.js lines 100-106)
 
    - ```javascript
-     // List the card images you want to include in the same order as the repos above
-     // There MUST be one image per repo above or the defualt image will be applied
-     export const projectData = [
+     // Replace the defualt GitHub image for matching repos below (images imported above - lines 13-14)
+     export const projectCardImages = [
        {
-         image: colors,
-       },
-       {
-         image: notepad,
-       },
-       {
-         image: robot,
+         name: "example-1",
+         image: Logo,
        },
      ];
      ```
@@ -124,32 +130,28 @@ Add your GitHub username once and all of your info will automatically be updated
 
 ![Contact Preview](/images/contact.png)
 
-1. Follow the instructions to update the contactInfo object (data.js line 109)
+1. The contact form uses [Formspree](https://formspree.io/), create an account and add your endpoint URL (data.js lines 108-113)
 
    - ```javascript
      /* Contact Info
-      ************************************************************** */
-     // Share the contact info you are comfortable with (no dashes for phone numbers)
-     // If no info provided a button with a link to mailchimp will be rendered
-     // Update the link if you want to use this option
-     export const contactInfo = {
-       email: "",
-       phone: "",
-       mailChimp: "https://www.mailchimp.com/",
-     };
+      ************************************************************** 
+      Add your formspree endpoint below.
+      https://formspree.io/
+     */
+     export const formspreeUrl = "https://formspree.io/f/YourEndpoint";
      ```
 
 ## Deploy
 
-A helpful guide for Create React App deployments with GitHub Pages can be found <a href="https://create-react-app.dev/docs/deployment#github-pages">here</a>.
+A helpful guide for Create React App deployments with GitHub Pages can be found [here](https://create-react-app.dev/docs/deployment#github-pages)
 
 1. Update the homepage value in package.json (line 3)
 
    - ```javascript
-     "homepage": "https://yourusername.github.io/your-app/",
+     "homepage": "https://YourUsername.github.io/your-app/",
      ```
 
-1. Run the deployment command
+1. Run the deploy command
 
    - ```bash
      npm run deploy
