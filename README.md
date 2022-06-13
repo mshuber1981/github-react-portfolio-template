@@ -143,7 +143,7 @@ Add your GitHub username once and all of your info will automatically be updated
 
 ## Deploy
 
-A helpful guide for Create React App deployments with GitHub Pages can be found [here](https://create-react-app.dev/docs/deployment#github-pages)
+A helpful guide for Create React App deployments with GitHub Pages can be found [here](https://create-react-app.dev/docs/deployment#github-pages).
 
 1. Update the homepage value in package.json (line 3)
 
