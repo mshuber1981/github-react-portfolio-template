@@ -42,19 +42,6 @@ Add your GitHub username once and all of your info will automatically be updated
      npm start
      ```
 
-## Updating the Hero images
-
-1. Update the image imports/exports (data.js line 16-21)
-
-   - ```javascript
-     // Hero Images (add your images to the /images directory with the same names)
-     import HeroLight from "./images/hero-light.jpg";
-     import HeroDark from "./images/hero-dark.jpg";
-     // If you change the import names above then you need to change the export names below
-     export { HeroLight as Light };
-     export { HeroDark as Dark };
-     ```
-
 ## Updating the Skills section
 
 ![Skills Preview](/README_images/skills.png)
@@ -156,6 +143,12 @@ A helpful guide for Create React App deployments with GitHub Pages can be found 
    - ```bash
      npm run deploy
      ```
+
+## Wiki
+
+Checkout the [Wiki](https://github.com/mshuber1981/github-react-portfolio-template/wiki) for additional customization options:
+
+- [Updating the Hero images](https://github.com/mshuber1981/github-react-portfolio-template/wiki/Updating-the-Hero-images)<br />
 
 [Back to top :top:](#github-react-portfolio-template)
 
