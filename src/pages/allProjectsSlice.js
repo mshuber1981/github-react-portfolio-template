@@ -44,7 +44,7 @@ export const allProjectsSlice = createSlice({
         state.data = action.payload;
         projectCardImages.forEach(function (element) {
           state.data.forEach((el, i) => {
-            if (element.name === el.name) {
+            if (element.name.toLowerCase() === el.name.toLowerCase()) {
               el.image = element.image;
             }
           });
