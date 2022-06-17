@@ -1,6 +1,6 @@
 [![GitHub Repo stars](https://img.shields.io/github/stars/mshuber1981/github-react-portfolio-template?color=%2361dbfb&style=for-the-badge&logo=github)](https://github.com/mshuber1981/github-react-portfolio-template/stargazers/) [![GitHub Repo Forks](https://img.shields.io/github/forks/mshuber1981/github-react-portfolio-template?color=%2361dbfb&style=for-the-badge&logo=github&label=Forks)](https://github.com/mshuber1981/github-react-portfolio-template/network/members)
 
-# GitHub React Portfolio Template
+# A React Portfolio Template for GitHub
 
 A performant, accessible, progressive React portfolio template that uses the [GitHub REST API](https://docs.github.com/en/free-pro-team@latest/rest).
 
@@ -31,7 +31,7 @@ Add your GitHub username once and all of your info will automatically be updated
    - ```javascript
      /* START HERE
       ************************************************************** 
-      Add your GitHub username below.
+      Add your GitHub username (string - "YourUsername") below.
      */
      export const githubUsername = "Your GitHub username here";
      ```
@@ -40,41 +40,6 @@ Add your GitHub username once and all of your info will automatically be updated
 
    - ```bash
      npm start
-     ```
-
-## Updating the Skills section
-
-![Skills Preview](/README_images/skills.png)
-
-1. Import your desired skill icons (data.js line 1-11)
-
-   - ```javascript
-     // Skills icons - https://react-icons.github.io/react-icons/
-     import {
-       FaHtml5,
-       FaCss3Alt,
-       FaBootstrap,
-       FaReact,
-       FaGitAlt,
-       FaGithubSquare,
-       FaLink,
-     } from "react-icons/fa";
-     import { SiJavascript, SiStyledcomponents, SiRedux } from "react-icons/si";
-     ```
-
-1. Follow the instructions to update the skillData array (data.js line 39-89)
-
-   - ```javascript
-     /* Skills
-      **************************************************************
-      Add or remove skills in the SAME format below, there must be one icon imported above per skill below.
-     */
-     export const skillData = [
-      {
-       id: 1,
-       skill: <FaHtml5 className="display-4" />,
-       name: "HTML5",
-      },
      ```
 
 ## Updating the Projects section
@@ -149,6 +114,9 @@ A helpful guide for Create React App deployments with GitHub Pages can be found 
 Checkout the [Wiki](https://github.com/mshuber1981/github-react-portfolio-template/wiki) for additional customization options:
 
 <!-- - [Updating the Hero images](https://github.com/mshuber1981/github-react-portfolio-template/wiki/Updating-the-Hero-images) -->
+
+- [Updating the Skills section](https://github.com/mshuber1981/github-react-portfolio-template/wiki/Updating-the-Skills-section)
+- [Add a link to your resume](https://github.com/mshuber1981/github-react-portfolio-template/wiki/Updating-the-Skills-section#add-a-link-to-your-resume)
 
 <br />
 

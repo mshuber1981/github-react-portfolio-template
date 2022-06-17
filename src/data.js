@@ -22,7 +22,7 @@ export { HeroDark as Dark };
 
 /* START HERE
  **************************************************************
-  Add your GitHub username below.
+  Add your GitHub username (string - "YourUsername") below.
 */
 export const githubUsername = "Your GitHub username here";
 
@@ -88,7 +88,7 @@ export const skillData = [
   },
 ];
 
-// Resume link - I am using CloudFront to share my resume (https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Introduction.html)
+// Resume link (string - "https://YourResumeUrl") - I am using CloudFront to share my resume (https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Introduction.html)
 export const resume = null;
 
 /* Projects
