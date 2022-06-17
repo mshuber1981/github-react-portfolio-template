@@ -144,7 +144,7 @@ A helpful guide for Create React App deployments with GitHub Pages can be found 
      npm run deploy
      ```
 
-## Wiki
+## Customization Options
 
 Checkout the [Wiki](https://github.com/mshuber1981/github-react-portfolio-template/wiki) for additional customization options:
 
@@ -153,6 +153,8 @@ Checkout the [Wiki](https://github.com/mshuber1981/github-react-portfolio-templa
 <br />
 
 [Back to top :top:](#github-react-portfolio-template)
+
+<br />
 
 ## License
 
