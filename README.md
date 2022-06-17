@@ -121,7 +121,7 @@ Checkout the [Wiki](https://github.com/mshuber1981/github-react-portfolio-templa
 
 <br />
 
-[Back to top :top:](#github-react-portfolio-template)
+[Back to top :top:](#a-react-portfolio-template-for-github)
 
 ## License
 
