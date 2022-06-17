@@ -26,7 +26,7 @@ export { HeroDark as Dark };
 */
 export const githubUsername = "Your GitHub username here";
 
-// Blog/alternate link icon
+// Blog link icon (imported above)
 export const Blog = <FaLink />;
 
 /* About Me
