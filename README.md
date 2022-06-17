@@ -115,14 +115,13 @@ Checkout the [Wiki](https://github.com/mshuber1981/github-react-portfolio-templa
 
 <!-- - [Updating the Hero images](https://github.com/mshuber1981/github-react-portfolio-template/wiki/Updating-the-Hero-images) -->
 
+- [Updating the About Me section](https://github.com/mshuber1981/github-react-portfolio-template/wiki/Updating-the-About-Me-section)
 - [Updating the Skills section](https://github.com/mshuber1981/github-react-portfolio-template/wiki/Updating-the-Skills-section)
 - [Add a link to your resume](https://github.com/mshuber1981/github-react-portfolio-template/wiki/Updating-the-Skills-section#add-a-link-to-your-resume)
 
 <br />
 
 [Back to top :top:](#github-react-portfolio-template)
-
-<br />
 
 ## License
 
