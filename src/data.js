@@ -10,7 +10,7 @@ import {
 } from "react-icons/fa";
 import { SiJavascript, SiStyledcomponents, SiRedux } from "react-icons/si";
 
-// Projects Images (add your images to the /images directory and import below)
+// Projects Images (add your images to the images directory and import below)
 import Logo from "./images/logo.svg";
 
 // Hero Images (add your images to the /images directory with the same names)
