@@ -5,7 +5,7 @@ import { AppProvider } from "./appContext";
 // https://redux.js.org/tutorials/fundamentals/part-5-ui-react#passing-the-store-with-provider
 import { Provider } from "react-redux";
 import { store } from "./store";
-// https://create-react-app.dev/docs/adding-bootstrap - https://stackoverflow.com/questions/72163411/react-bootstarp-warning-about-color-adjust
+// https://create-react-app.dev/docs/adding-bootstrap
 import "bootstrap/dist/css/bootstrap.css";
 import App from "./App";
 import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
