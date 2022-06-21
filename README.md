@@ -10,7 +10,7 @@ Add your GitHub username once and all of your info will automatically be updated
 
 ![Page Speed](/README_images/speed.png)
 
-### <a href="https://mshuber1981.github.io/github-react-portfolio-template/">LIVE DEMO</a>
+### <a href="https://mshuber1981.github.io/github-react-portfolio-template/#/">LIVE DEMO</a>
 
 ![Project Preview](/README_images/preview.png)
 
