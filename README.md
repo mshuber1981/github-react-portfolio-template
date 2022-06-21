@@ -26,7 +26,7 @@ Add your GitHub username once and all of your info will automatically be updated
      ```
 
 1. Navigate to the src directory and open data.js
-1. Add your GitHub username [data.js](https://github.com/mshuber1981/github-react-portfolio-template/blob/0133fcc02ab048fefcf73825d02385ffe27c3721/src/data.js#L23) (lines 23-27)
+1. Add your GitHub username ([data.js](https://github.com/mshuber1981/github-react-portfolio-template/blob/0133fcc02ab048fefcf73825d02385ffe27c3721/src/data.js#L23) lines 23-27)
 
    - ```javascript
      /* START HERE
@@ -46,7 +46,7 @@ Add your GitHub username once and all of your info will automatically be updated
 
 ![Projects Preview](/README_images/projects.png)
 
-1. Follow the instructions to update the filteredProjects array [data.js](https://github.com/mshuber1981/github-react-portfolio-template/blob/0133fcc02ab048fefcf73825d02385ffe27c3721/src/data.js#L94) (lines 94-98)
+1. Follow the instructions to update the filteredProjects array ([data.js](https://github.com/mshuber1981/github-react-portfolio-template/blob/0133fcc02ab048fefcf73825d02385ffe27c3721/src/data.js#L94) lines 94-98)
 
    - ```javascript
      /* Projects
@@ -56,14 +56,14 @@ Add your GitHub username once and all of your info will automatically be updated
      export const filteredProjects = ["example-1", "example-2", "example-3"];
      ```
 
-1. Import the projects images you want to use [data.js](https://github.com/mshuber1981/github-react-portfolio-template/blob/0133fcc02ab048fefcf73825d02385ffe27c3721/src/data.js#L13) (lines 13-14) or the default image will be applied
+1. Import the projects images you want to use ([data.js](https://github.com/mshuber1981/github-react-portfolio-template/blob/0133fcc02ab048fefcf73825d02385ffe27c3721/src/data.js#L13) lines 13-14) or the default image will be applied
 
    - ```javascript
      // Projects Images (add your images to the images directory and import below)
      import Logo from "./images/logo.svg";
      ```
 
-1. Follow the instructions to update the projectData array [data.js](https://github.com/mshuber1981/github-react-portfolio-template/blob/0133fcc02ab048fefcf73825d02385ffe27c3721/src/data.js#L100) (lines 100-106)
+1. Follow the instructions to update the projectData array ([data.js](https://github.com/mshuber1981/github-react-portfolio-template/blob/0133fcc02ab048fefcf73825d02385ffe27c3721/src/data.js#L100) lines 100-106)
 
    - ```javascript
      // Replace the defualt GitHub image for matching repos below (images imported above - lines 13-14)
@@ -79,7 +79,7 @@ Add your GitHub username once and all of your info will automatically be updated
 
 ![Contact Preview](/README_images/contact.png)
 
-1. The contact form uses [Formspree](https://formspree.io/), create an account and add your endpoint URL [data.js](https://github.com/mshuber1981/github-react-portfolio-template/blob/0133fcc02ab048fefcf73825d02385ffe27c3721/src/data.js#L108) (lines 108-113)
+1. The contact form uses [Formspree](https://formspree.io/), create an account and add your endpoint URL ([data.js](https://github.com/mshuber1981/github-react-portfolio-template/blob/0133fcc02ab048fefcf73825d02385ffe27c3721/src/data.js#L108) lines 108-113)
 
    - ```javascript
      /* Contact Info
@@ -94,7 +94,7 @@ Add your GitHub username once and all of your info will automatically be updated
 
 A helpful guide for Create React App deployments with GitHub Pages can be found [here](https://create-react-app.dev/docs/deployment#github-pages).
 
-1. Update the homepage value in [package.json](https://github.com/mshuber1981/github-react-portfolio-template/blob/0133fcc02ab048fefcf73825d02385ffe27c3721/package.json#L3) (line 3)
+1. Update the homepage value ([package.json](https://github.com/mshuber1981/github-react-portfolio-template/blob/0133fcc02ab048fefcf73825d02385ffe27c3721/package.json#L3) line 3)
 
    - ```javascript
      "homepage": "https://YourUsername.github.io/your-app/",
