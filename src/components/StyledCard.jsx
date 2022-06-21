@@ -8,13 +8,17 @@ import GH from "../images/GH.svg";
 import { Card } from "react-bootstrap";
 
 const StyledCardComponent = styled.div`
-  .card-link {
-    text-decoration: none;
-    font-size: 1.5rem;
-    color: ${({ theme }) => theme.color};
+  .card-footer {
+    border-top: var(--border);
 
-    &:hover {
-      color: var(--primary);
+    .card-link {
+      text-decoration: none;
+      font-size: 1.5rem;
+      color: ${({ theme }) => theme.color};
+
+      &:hover {
+        color: var(--primary);
+      }
     }
   }
 `;

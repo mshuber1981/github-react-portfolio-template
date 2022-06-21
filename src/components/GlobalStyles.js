@@ -11,6 +11,7 @@ Variables
   /* Primary Color */
   --primary: #61DBFB;
   --primary-dark: #316e7e;
+  --border: 1px solid #61DBFB;
   --transition: all 0.3s linear;
   --nav-height: 61px;
   --min-footer-height: 11vh;
@@ -28,6 +29,10 @@ body {
 
 a:hover {
   cursor: pointer;
+}
+
+.navbar {
+  border-bottom: var(--border);
 }
 
 .link-icons {
@@ -61,7 +66,7 @@ img:not(.nav-logo) {
 
 .card {
     height: 30rem;
-    border: 1px solid var(--primary);
+    border: var(--border);
     transition: all .2s ease-in-out;
     &:hover {
       transform: scale(1.03);
