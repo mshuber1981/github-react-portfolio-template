@@ -3,7 +3,7 @@ import { useAppContext } from "../appContext";
 import { Link } from "react-scroll";
 // Components
 import { Container, Nav, Navbar } from "react-bootstrap";
-import { ToggleSwitch, FixedNavSpacer } from "./globalStyledComponents";
+import { FixedNavSpacer, ToggleSwitch } from "./globalStyledComponents";
 // Images
 import Logo from "../images/logo.svg";
 
