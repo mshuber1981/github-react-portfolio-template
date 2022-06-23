@@ -8,8 +8,7 @@ import { ToggleSwitch, FixedNavSpacer } from "./globalStyledComponents";
 import Logo from "../images/logo.svg";
 
 export default function NavBar() {
-  const [isExpanded, setExpanded] = React.useState(false);
-  const { theme } = useAppContext();
+  const { theme, isExpanded, toggleExpanded, closeExpanded } = useAppContext();
 
   return (
     <>
@@ -35,7 +34,7 @@ export default function NavBar() {
           </Navbar.Brand>
           <Navbar.Toggle
             aria-controls="responsive-navbar-nav"
-            onClick={() => setExpanded(!isExpanded)}
+            onClick={toggleExpanded}
           />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav navbarScroll className="me-auto">
@@ -45,11 +44,7 @@ export default function NavBar() {
                   spy={true}
                   activeClass="active"
                   className="nav-link"
-                  onClick={() =>
-                    setTimeout(() => {
-                      setExpanded(false);
-                    }, 250)
-                  }
+                  onClick={closeExpanded}
                 >
                   Home
                 </Link>
@@ -60,11 +55,7 @@ export default function NavBar() {
                   spy={true}
                   activeClass="active"
                   className="nav-link"
-                  onClick={() =>
-                    setTimeout(() => {
-                      setExpanded(false);
-                    }, 250)
-                  }
+                  onClick={closeExpanded}
                 >
                   About Me
                 </Link>
@@ -75,11 +66,7 @@ export default function NavBar() {
                   spy={true}
                   activeClass="active"
                   className="nav-link"
-                  onClick={() =>
-                    setTimeout(() => {
-                      setExpanded(false);
-                    }, 250)
-                  }
+                  onClick={closeExpanded}
                 >
                   Skills
                 </Link>
@@ -90,11 +77,7 @@ export default function NavBar() {
                   spy={true}
                   activeClass="active"
                   className="nav-link"
-                  onClick={() =>
-                    setTimeout(() => {
-                      setExpanded(false);
-                    }, 250)
-                  }
+                  onClick={closeExpanded}
                 >
                   Projects
                 </Link>
@@ -103,14 +86,9 @@ export default function NavBar() {
                 <Link
                   to={"Contact"}
                   spy={true}
-                  // offset={-80}
                   activeClass="active"
                   className="nav-link"
-                  onClick={() =>
-                    setTimeout(() => {
-                      setExpanded(false);
-                    }, 250)
-                  }
+                  onClick={closeExpanded}
                 >
                   Contact
                 </Link>

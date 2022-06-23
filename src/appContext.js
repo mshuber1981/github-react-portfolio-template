@@ -4,26 +4,30 @@ const AppContext = React.createContext();
 
 const AppProvider = function ({ children }) {
   const [theme, setTheme] = React.useState("light");
-  const [isSidebarOpen, setIsSidebarOpen] = React.useState(false);
+  const [isExpanded, setExpanded] = React.useState(false);
 
   const toggleTheme = () =>
     setTheme((prevState) =>
       prevState === "light" ? setTheme("dark") : setTheme("light")
     );
 
-  const openSidebar = () => setIsSidebarOpen((prevState) => !prevState);
+  const toggleExpanded = () => setExpanded((prevState) => !prevState);
 
-  const closeSidebar = () => setIsSidebarOpen(false);
+  const closeExpanded = function () {
+    setTimeout(function () {
+      setExpanded(false);
+    }, 250);
+  };
 
   return (
     <AppContext.Provider
       value={{
         theme,
         setTheme,
-        isSidebarOpen,
         toggleTheme,
-        openSidebar,
-        closeSidebar,
+        isExpanded,
+        toggleExpanded,
+        closeExpanded,
       }}
     >
       {children}
