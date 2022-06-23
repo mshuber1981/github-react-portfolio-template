@@ -46,7 +46,6 @@ const StyledSwitch = styled.label`
   width: 3.2rem;
   font-size: 1.5rem;
   border-radius: 30px;
-  margin: auto 0;
   transition: var(--transition);
   border: 2px solid;
 
@@ -71,10 +70,10 @@ const StyledSwitch = styled.label`
 `;
 
 export function ToggleSwitch() {
-  const { theme, toggleTheme } = useAppContext();
+  const { theme, toggleTheme, closeExpanded } = useAppContext();
 
   return (
-    <StyledSwitch className="toggle-theme">
+    <StyledSwitch onClick={closeExpanded}>
       <input
         type="checkbox"
         aria-label={`Toggle theme, currently ${theme}.`}
