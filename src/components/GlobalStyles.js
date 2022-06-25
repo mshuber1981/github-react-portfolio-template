@@ -65,18 +65,18 @@ img:not(.nav-logo) {
 }
 
 .card {
-    height: 30rem;
-    border: var(--border);
-    transition: all .2s ease-in-out;
-    &:hover {
-      transform: scale(1.03);
-    }
-
-    .card-img-top {
-      height: 50%;
-      object-fit: contain;
-    }
+  height: 30rem;
+  border: var(--border);
+  transition: all .2s ease-in-out;
+  &:hover {
+    transform: scale(1.03);
   }
+
+  .card-img-top {
+    height: 50%;
+    object-fit: contain;
+  }
+}
 
 @media screen and (min-width: 800px) {
   .link-icons {
