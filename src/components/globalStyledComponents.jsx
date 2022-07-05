@@ -89,10 +89,12 @@ export const Title = styled.div`
   display: inline-block;
   margin: 0 auto;
   font-family: "Permanent Marker";
+  text-align: center;
 
   .underline {
     height: 0.25rem;
     width: 75%;
+    min-width: 3rem;
     background: var(--clr-primary-5);
     margin: 0 auto 1.5rem auto;
     background: ${({ theme }) =>
