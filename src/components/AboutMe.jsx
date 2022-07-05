@@ -22,7 +22,7 @@ export default function AboutMe() {
   const { avatar_url, bio } = useSelector(selectData);
 
   return (
-    <Element name={"About"}>
+    <Element name={"About"} id="about">
       <StyledAboutMe className="section">
         <Container>
           <Container className="d-flex">

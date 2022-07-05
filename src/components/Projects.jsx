@@ -46,7 +46,7 @@ export default function Projects() {
   );
 
   return (
-    <Element name={"Projects"}>
+    <Element name={"Projects"} id="projects">
       <StyledSection className="section">
         <Container>
           <Container className="d-flex">

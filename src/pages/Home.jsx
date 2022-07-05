@@ -12,7 +12,7 @@ import Footer from "../components/Footer";
 export default function Home() {
   return (
     <>
-      <Element name={"Home"}>
+      <Element name={"Home"} id="home">
         <NavBar />
         <Hero />
       </Element>

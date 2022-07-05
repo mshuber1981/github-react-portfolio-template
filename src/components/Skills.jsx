@@ -10,7 +10,7 @@ export default function Skills() {
   const { theme } = useAppContext();
 
   return (
-    <Element name={"Skills"}>
+    <Element name={"Skills"} id="skills">
       <section className="section">
         <Container className="text-center">
           <Title>
