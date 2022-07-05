@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useAppContext } from "../appContext";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 // Components
 import { Container, Nav, Navbar } from "react-bootstrap";
 import { ToggleSwitch, FixedNavSpacer } from "./globalStyledComponents";
@@ -9,6 +9,7 @@ import Logo from "../images/logo.svg";
 
 export default function SecondaryNavBar() {
   const [isExpanded, setExpanded] = useState(false);
+  const { pathname } = useLocation();
   const { theme } = useAppContext();
 
   return (
@@ -40,8 +41,23 @@ export default function SecondaryNavBar() {
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav navbarScroll className="me-auto">
               <Nav.Item>
-                <Link to="/" className="nav-link">
+                <Link
+                  to="/"
+                  className={pathname === "/" ? "nav-link active" : "nav-link"}
+                >
                   Home
+                </Link>
+              </Nav.Item>
+              <Nav.Item>
+                <Link
+                  to="/All-Projects"
+                  className={
+                    pathname === "/All-Projects"
+                      ? "nav-link active"
+                      : "nav-link"
+                  }
+                >
+                  All Projects
                 </Link>
               </Nav.Item>
             </Nav>
