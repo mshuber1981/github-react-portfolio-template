@@ -27,9 +27,10 @@ export default function ScrollToTop() {
 
       if (pathname === "/") {
         document.title = `${name} | Portfolio`;
-      }
-      if (pathname === "/All-Projects") {
+      } else if (pathname === "/All-Projects") {
         document.title = `${name} | All Projects`;
+      } else {
+        document.title = `${name} | Portfolio`;
       }
     },
     [pathname, name, hash, key, navigate]
