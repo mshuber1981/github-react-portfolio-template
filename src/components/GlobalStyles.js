@@ -46,12 +46,6 @@ a:hover {
       }
 }
 
-img:not(.nav-logo) {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
 .section {
   min-height: 100vh;
   display: grid;
