@@ -36,7 +36,7 @@ export default function Skills() {
                 variant={theme === "light" ? "outline-dark" : "outline-light"}
                 className="mt-5"
               >
-                Resume
+                R&eacute;sum&eacute;
               </Button>
             </a>
           )}
