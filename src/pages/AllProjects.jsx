@@ -92,7 +92,7 @@ export default function AllProjects() {
           setFilteredResults(filteredData.slice(0, 6));
         } else {
           setFilteredResults(
-            filteredData.slice((activePage - 1) * 6, (activePage - 1) * 7 + 5)
+            filteredData.slice((activePage - 1) * 6, (activePage - 1) * 6 + 6)
           );
         }
       } else {
@@ -113,7 +113,7 @@ export default function AllProjects() {
           setFilteredResults(data.slice(0, 6));
         } else {
           setFilteredResults(
-            data.slice((activePage - 1) * 6, (activePage - 1) * 7 + 5)
+            data.slice((activePage - 1) * 6, (activePage - 1) * 6 + 6)
           );
         }
       }
@@ -236,10 +236,12 @@ export default function AllProjects() {
                     })}
               </Row>
               <Container className="d-flex justify-content-center mt-4">
-                {pageItems.length <= 4 ? (
-                  <Pagination size="lg">{pageItems}</Pagination>
+                {pageItems.length <= 2 ? (
+                  <Pagination size="lg" className="mb-4">
+                    {pageItems}
+                  </Pagination>
                 ) : (
-                  <Pagination>
+                  <Pagination className="mb-5">
                     <Pagination.Prev
                       onClick={() =>
                         activePage === 1
