@@ -7,7 +7,14 @@ import styled from "styled-components";
 // Icons
 import { FaGithub, FaSearch } from "react-icons/fa";
 // Components
-import { Col, Container, FormControl, InputGroup, Row } from "react-bootstrap";
+import {
+  Col,
+  Container,
+  FormControl,
+  InputGroup,
+  Pagination,
+  Row,
+} from "react-bootstrap";
 import {
   BackToTop,
   Title,
@@ -18,11 +25,14 @@ import StyledCard from "../components/StyledCard";
 import Footer from "../components/Footer";
 
 const StyledSection = styled.section`
-  min-height: 90vh;
-  padding-bottom: var(--nav-height);
+  min-height: calc(100vh - var(--min-footer-height) - var(--nav-height));
 
   .input-group {
     max-width: 90vw;
+  }
+
+  .row {
+    min-height: var(--card-height);
   }
 
   .card-link {
@@ -45,6 +55,8 @@ const StyledSection = styled.section`
 export default function AllProjects() {
   const [searchInput, setSearchInput] = React.useState("");
   const [filteredResults, setFilteredResults] = React.useState([]);
+  const [pageItems, setPageItems] = React.useState([]);
+  const [activePage, setActivePage] = React.useState(1);
   const { theme } = useAppContext();
   const isLoading = useSelector(selectIsLoading);
   const error = useSelector(selectError);
@@ -56,12 +68,57 @@ export default function AllProjects() {
         const filteredData = data.filter((item) => {
           return item.name.toLowerCase().includes(searchInput.toLowerCase());
         });
-        setFilteredResults(filteredData);
+        const tempPageItems = [];
+        for (
+          let number = 1;
+          number <= Math.ceil(filteredData.length / 6);
+          number++
+        ) {
+          tempPageItems.push(
+            <Pagination.Item
+              key={number}
+              active={number === activePage}
+              onClick={() => setActivePage(number)}
+            >
+              {number}
+            </Pagination.Item>
+          );
+          setPageItems([...tempPageItems]);
+          if (activePage > pageItems.length) {
+            setActivePage(1);
+          }
+        }
+        if (activePage === 1) {
+          setFilteredResults(filteredData.slice(0, 6));
+        } else {
+          setFilteredResults(
+            filteredData.slice((activePage - 1) * 6, (activePage - 1) * 7 + 5)
+          );
+        }
       } else {
-        setFilteredResults(data);
+        const tempPageItems = [];
+        for (let number = 1; number <= Math.ceil(data.length / 6); number++) {
+          tempPageItems.push(
+            <Pagination.Item
+              key={number}
+              active={number === activePage}
+              onClick={() => setActivePage(number)}
+            >
+              {number}
+            </Pagination.Item>
+          );
+          setPageItems([...tempPageItems]);
+        }
+        if (activePage === 1) {
+          setFilteredResults(data.slice(0, 6));
+        } else {
+          setFilteredResults(
+            data.slice((activePage - 1) * 6, (activePage - 1) * 7 + 5)
+          );
+        }
       }
     },
-    [searchInput, data]
+    [searchInput, data, pageItems.length, activePage]
   );
 
   if (isLoading) {
@@ -132,7 +189,12 @@ export default function AllProjects() {
                   onChange={(e) => setSearchInput(e.currentTarget.value)}
                 />
               </InputGroup>
-              <Row xs={1} md={2} lg={3} className="g-4 justify-content-center">
+              <Row
+                xs={1}
+                md={2}
+                lg={3}
+                className="g-4 justify-content-center row"
+              >
                 {searchInput.length > 0
                   ? filteredResults.map(function ({
                       id,
@@ -153,7 +215,7 @@ export default function AllProjects() {
                         </Col>
                       );
                     })
-                  : data.map(function ({
+                  : filteredResults.map(function ({
                       id,
                       image,
                       name,
@@ -173,6 +235,35 @@ export default function AllProjects() {
                       );
                     })}
               </Row>
+              <Container className="d-flex justify-content-center mt-4">
+                {pageItems.length <= 4 ? (
+                  <Pagination size="lg">{pageItems}</Pagination>
+                ) : (
+                  <Pagination>
+                    <Pagination.Prev
+                      onClick={() =>
+                        activePage === 1
+                          ? setActivePage(pageItems.length)
+                          : setActivePage(activePage - 1)
+                      }
+                    />
+                    {pageItems[0]}
+                    <Pagination.Ellipsis />
+                    <Pagination.Item active={true}>
+                      {activePage}
+                    </Pagination.Item>
+                    <Pagination.Ellipsis />
+                    {pageItems[pageItems.length - 1]}
+                    <Pagination.Next
+                      onClick={() =>
+                        activePage === pageItems.length
+                          ? setActivePage(1)
+                          : setActivePage(activePage + 1)
+                      }
+                    />
+                  </Pagination>
+                )}
+              </Container>
             </Container>
           </StyledSection>
         </main>

@@ -15,6 +15,7 @@ Variables
   --transition: all 0.3s linear;
   --nav-height: 61px;
   --min-footer-height: 11vh;
+  --card-height: 30rem;
 }
 
 /*
@@ -51,7 +52,6 @@ a:hover {
   display: grid;
   place-items: center;
   padding: var(--nav-height) 0;
-
 }
 
 .title {
@@ -59,7 +59,7 @@ a:hover {
 }
 
 .card {
-  height: 30rem;
+  height: var(--card-height);
   border: var(--border);
   transition: all .2s ease-in-out;
   &:hover {
@@ -70,6 +70,11 @@ a:hover {
     height: 50%;
     object-fit: contain;
   }
+}
+
+.page-item.active .page-link {
+    background-color: var(--primary);
+    border-color: var(--primary);
 }
 
 @media screen and (min-width: 800px) {
