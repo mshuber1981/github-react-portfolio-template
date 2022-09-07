@@ -73,11 +73,14 @@ export function ToggleSwitch() {
   const { theme, toggleTheme, closeExpanded } = useAppContext();
 
   return (
-    <StyledSwitch onClick={closeExpanded}>
+    <StyledSwitch>
       <input
         type="checkbox"
         aria-label={`Toggle theme, currently ${theme}.`}
-        onClick={toggleTheme}
+        onClick={() => {
+          toggleTheme();
+          closeExpanded();
+        }}
       />
       <div>{theme === "light" ? <GiSunflower /> : <GiMoon />}</div>
     </StyledSwitch>

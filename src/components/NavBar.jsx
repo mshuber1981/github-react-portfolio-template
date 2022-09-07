@@ -8,7 +8,7 @@ import { FixedNavSpacer, ToggleSwitch } from "./globalStyledComponents";
 import Logo from "../images/logo.svg";
 
 export default function NavBar() {
-  const { theme, isExpanded, toggleExpanded, closeExpanded } = useAppContext();
+  const { theme, isExpanded, closeExpanded, toggleExpanded } = useAppContext();
 
   return (
     <>
