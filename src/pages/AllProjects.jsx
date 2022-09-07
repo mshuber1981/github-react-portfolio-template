@@ -20,7 +20,6 @@ import {
   Title,
   Loading,
 } from "../components/globalStyledComponents";
-import ScrollToTop from "../components/ScrollToTop";
 import SecondaryNavBar from "../components/SecondaryNavBar";
 import StyledCard from "../components/StyledCard";
 import Footer from "../components/Footer";
@@ -160,7 +159,6 @@ export default function AllProjects() {
   } else {
     return (
       <>
-        <ScrollToTop />
         <Element name={"AllProjects"}>
           <SecondaryNavBar />
         </Element>

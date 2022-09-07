@@ -1,6 +1,5 @@
 import { Element } from "react-scroll";
 // Components
-import ScrollToTop from "../components/ScrollToTop";
 import NavBar from "../components/NavBar";
 import Hero from "../components/Hero";
 import AboutMe from "../components/AboutMe";
@@ -13,7 +12,6 @@ import Footer from "../components/Footer";
 export default function Home() {
   return (
     <>
-      <ScrollToTop />
       <Element name={"Home"} id="home">
         <NavBar />
         <Hero />
