@@ -1,4 +1,6 @@
 import React from "react";
+import { useSelector } from "react-redux";
+import { selectData } from "../pages/homeSlice";
 import styled from "styled-components";
 // Media
 import Logo from "../images/logo.svg";
@@ -34,6 +36,15 @@ const StyledNotFound = styled.main`
 `;
 
 export default function NotFound() {
+  const { name } = useSelector(selectData);
+
+  React.useEffect(
+    function () {
+      document.title = `${name} | Portfolio`;
+    },
+    [name]
+  );
+
   return (
     <>
       <NotFoundNavBar />

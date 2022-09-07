@@ -12,6 +12,7 @@ import { ThemeProvider } from "styled-components";
 // Components
 import { Container } from "react-bootstrap";
 import { Loading } from "./components/globalStyledComponents";
+import ScrollToTop from "./components/ScrollToTop";
 import GlobalStyles from "./components/GlobalStyles";
 // Pages
 import Home from "./pages/Home";
@@ -77,6 +78,7 @@ export default function App() {
     return (
       <HashRouter>
         <ThemeProvider theme={themes[theme]}>
+          <ScrollToTop />
           <GlobalStyles />
           <Routes>
             <Route exact path="/" element={<Home />} />
