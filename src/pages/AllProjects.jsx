@@ -20,7 +20,8 @@ import {
   Title,
   Loading,
 } from "../components/globalStyledComponents";
-import AllProjectsNavBar from "../components/SecondaryNavBar";
+import ScrollToTop from "../components/ScrollToTop";
+import SecondaryNavBar from "../components/SecondaryNavBar";
 import StyledCard from "../components/StyledCard";
 import Footer from "../components/Footer";
 
@@ -74,9 +75,6 @@ export default function AllProjects() {
             </Pagination.Item>
           );
           setPageItems([...tempPageItems]);
-          if (activePage > pageItems.length) {
-            setActivePage(1);
-          }
         }
         if (activePage === 1) {
           setFilteredResults(filteredData.slice(0, 6));
@@ -111,10 +109,18 @@ export default function AllProjects() {
     [searchInput, data, pageItems.length, activePage]
   );
 
+  React.useEffect(
+    function () {
+      // Anytime the search input changes set the active page back to 1
+      setActivePage(1);
+    },
+    [searchInput]
+  );
+
   if (isLoading) {
     return (
       <>
-        <AllProjectsNavBar />
+        <SecondaryNavBar />
         <main>
           <StyledSection className="d-flex flex-column justify-content-center">
             <Container className="d-flex">
@@ -134,7 +140,7 @@ export default function AllProjects() {
   } else if (error) {
     return (
       <>
-        <AllProjectsNavBar />
+        <SecondaryNavBar />
         <main>
           <StyledSection className="d-flex flex-column justify-content-center">
             <Container className="d-flex">
@@ -154,8 +160,9 @@ export default function AllProjects() {
   } else {
     return (
       <>
+        <ScrollToTop />
         <Element name={"AllProjects"}>
-          <AllProjectsNavBar />
+          <SecondaryNavBar />
         </Element>
         <main>
           <StyledSection className="d-flex flex-column justify-content-center">
