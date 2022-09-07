@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React from "react";
 import { useAppContext } from "../appContext";
 import { Link, useLocation } from "react-router-dom";
 // Components
@@ -8,9 +8,8 @@ import { ToggleSwitch, FixedNavSpacer } from "./globalStyledComponents";
 import Logo from "../images/logo.svg";
 
 export default function SecondaryNavBar() {
-  const [isExpanded, setExpanded] = useState(false);
   const { pathname } = useLocation();
-  const { theme } = useAppContext();
+  const { theme, isExpanded, toggleExpanded } = useAppContext();
 
   return (
     <>
@@ -36,7 +35,7 @@ export default function SecondaryNavBar() {
           </Navbar.Brand>
           <Navbar.Toggle
             aria-controls="responsive-navbar-nav"
-            onClick={() => setExpanded(!isExpanded)}
+            onClick={toggleExpanded}
           />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav navbarScroll className="me-auto">
@@ -44,6 +43,7 @@ export default function SecondaryNavBar() {
                 <Link
                   to="/"
                   className={pathname === "/" ? "nav-link active" : "nav-link"}
+                  onClick={toggleExpanded}
                 >
                   Home
                 </Link>
@@ -56,6 +56,7 @@ export default function SecondaryNavBar() {
                       ? "nav-link active"
                       : "nav-link"
                   }
+                  onClick={toggleExpanded}
                 >
                   All Projects
                 </Link>
