@@ -12,7 +12,8 @@ export default function ScrollToTop() {
     function () {
       // if not a hash link, scroll to top
       if (hash === "") {
-        window.scrollTo(0, 0);
+        // https://stackoverflow.com/questions/11845371/window-scrollto-is-not-working-in-mobile-phones
+        setTimeout(window.scrollTo(0, 0), 100);
       }
       // else scroll to id
       else {
