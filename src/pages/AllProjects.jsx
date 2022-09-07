@@ -35,16 +35,6 @@ const StyledSection = styled.section`
     min-height: var(--card-height);
   }
 
-  .card-link {
-    text-decoration: none;
-    font-size: 1.5rem;
-    color: ${({ theme }) => theme.color};
-
-    &:hover {
-      color: var(--primary);
-    }
-  }
-
   @media screen and (min-width: 800px) {
     .input-group {
       width: 75%;
@@ -178,7 +168,7 @@ export default function AllProjects() {
               </Title>
             </Container>
             <Container>
-              <InputGroup className="mx-auto mb-4">
+              <InputGroup className="mx-auto mb-3">
                 <InputGroup.Text id="search">
                   <FaSearch />
                 </InputGroup.Text>
