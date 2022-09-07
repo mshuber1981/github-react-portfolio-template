@@ -2,7 +2,7 @@ import React from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 
 export default function ScrollToTop() {
-  const { pathname, hash, key } = useLocation();
+  const { pathname, hash } = useLocation();
   const navigate = useNavigate();
 
   // https://reactjs.org/docs/hooks-reference.html#uselayouteffect
@@ -10,7 +10,7 @@ export default function ScrollToTop() {
     function () {
       // if not a hash link, scroll to top
       if (hash === "") {
-        window.scrollTo(0, 0);
+        document.documentElement.scrollTo(0, 0);
       }
       // else scroll to id
       else {
@@ -23,7 +23,7 @@ export default function ScrollToTop() {
         }
       }
     },
-    [pathname, hash, key, navigate]
+    [pathname, hash, navigate]
   );
 
   return null;
