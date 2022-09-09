@@ -10,7 +10,9 @@ export default function ScrollToTop() {
     function () {
       // if not a hash link, scroll to top
       if (hash === "") {
-        document.documentElement.scrollTo(0, 0);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+        }, 100);
       }
       // else scroll to id
       else {
