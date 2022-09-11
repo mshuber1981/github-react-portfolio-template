@@ -8,7 +8,7 @@ const initialState = {
   data: [],
 };
 
-export const url = `https://api.github.com/users/${githubUsername}/repos`;
+export const url = `https://api.github.com/users/${githubUsername}/repos?per_page=100`;
 
 export const fetchGitHubReops = createAsyncThunk(
   "allProjects/fetchGitHubReops",
