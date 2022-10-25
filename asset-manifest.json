@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/your-app/static/css/main.8b8aea48.css",
+    "main.js": "/your-app/static/js/main.dd299a2e.js",
+    "static/media/hero-dark.jpg": "/your-app/static/media/hero-dark.37f2556d620821979e99.jpg",
+    "static/media/hero-light.jpg": "/your-app/static/media/hero-light.78b77836d8aee4d7d3cb.jpg",
+    "service-worker.js": "/your-app/service-worker.js",
+    "static/media/GH.svg": "/your-app/static/media/GH.b9e9a9aa6f05e9dfe5dcb8991bda3e4d.svg",
+    "static/media/logo.svg": "/your-app/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/your-app/index.html",
+    "static/media/form.svg": "/your-app/static/media/form.3e169f992276e0f05b498a947ba2798a.svg",
+    "main.8b8aea48.css.map": "/your-app/static/css/main.8b8aea48.css.map",
+    "main.dd299a2e.js.map": "/your-app/static/js/main.dd299a2e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8b8aea48.css",
+    "static/js/main.dd299a2e.js"
+  ]
+}
