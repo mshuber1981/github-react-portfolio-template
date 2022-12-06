@@ -12,7 +12,7 @@
     "react-dom": "^18.2.0",
     "react-icons": "^4.6.0",
     "react-redux": "^8.0.5",
-    "react-router-dom": "^6.4.3",
+    "react-router-dom": "^6.4.4",
     "react-scroll": "^1.8.7",
     "styled-components": "^5.3.6",
     "workbox-core": "^6.5.4",
