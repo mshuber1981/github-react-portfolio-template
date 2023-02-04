@@ -43,6 +43,7 @@ export const FixedNavSpacer = styled.div`
 const StyledSwitch = styled.label`
   /* Slider pill */
   display: flex;
+  margin: 0.5rem 0;
   width: 3.2rem;
   font-size: 1.5rem;
   border-radius: 30px;
