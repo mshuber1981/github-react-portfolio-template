@@ -125,14 +125,6 @@ export default function AllProjects() {
     [searchInput]
   );
 
-  React.useEffect(
-    function () {
-      // Anytime the active page changes scroll to top
-      window.scrollTo(0, 0);
-    },
-    [activePage]
-  );
-
   if (isLoading) {
     return (
       <>
