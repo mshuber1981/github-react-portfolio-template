@@ -28,9 +28,13 @@ export default function SecondaryNavBar() {
             <img
               alt="React Logo"
               src={Logo}
-              width="30"
-              height="30"
-              className="d-inline-block align-top bg-dark rounded-circle nav-logo"
+              width="35"
+              height="35"
+              className={
+                theme === "light"
+                  ? "bg-dark rounded-circle"
+                  : "bg-light rounded-circle"
+              }
             />
           </Navbar.Brand>
           <Navbar.Toggle
