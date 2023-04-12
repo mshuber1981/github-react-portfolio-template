@@ -3,7 +3,7 @@ import { selectData } from "../pages/homeSlice";
 import { Link } from "react-scroll";
 import styled from "styled-components";
 // Icons
-import { FaChevronCircleDown } from "react-icons/fa";
+import { Icon } from '@iconify/react';
 // Media
 import Logo from "../images/logo.svg";
 import { Light, Dark } from "../data";
@@ -104,7 +104,7 @@ export default function Hero() {
         <Row className="align-items-end down-container">
           <Col className="m-4 text-center">
             <Link to={"About"} className="link-icons">
-              <FaChevronCircleDown />
+            <Icon icon="fa6-solid:circle-chevron-down" />
             </Link>
           </Col>
         </Row>

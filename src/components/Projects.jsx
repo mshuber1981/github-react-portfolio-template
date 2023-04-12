@@ -12,7 +12,7 @@ import styled from "styled-components";
 // Data
 import { filteredProjects } from "../data";
 // Icons
-import { FaGithub } from "react-icons/fa";
+import { Icon } from '@iconify/react';
 // Components
 import { Button, Col, Container, Row } from "react-bootstrap";
 import { Title, Loading } from "./globalStyledComponents";
@@ -98,7 +98,7 @@ export default function Projects() {
                         theme === "light" ? "outline-dark" : "outline-light"
                       }
                     >
-                      All <FaGithub /> Projects
+                      All <Icon icon="icomoon-free:github" /> Projects
                     </Button>
                   </Link>
                 </Container>

@@ -22,6 +22,7 @@
     "workbox-strategies": "^6.5.4"
   },
   "devDependencies": {
+    "@iconify/react": "^4.1.0",
     "react-scripts": "^5.0.1"
   },
   "scripts": {

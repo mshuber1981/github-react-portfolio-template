@@ -5,7 +5,7 @@ import styled from "styled-components";
 // Data
 import { Blog } from "../data";
 // Icons
-import { FaGithub } from "react-icons/fa";
+import { Icon } from '@iconify/react';
 
 const StyledSocialLinks = styled.div`
   a {
@@ -23,7 +23,7 @@ export default function SocialLinks() {
         aria-label="Check out my GitHub profile."
         className="link-icons"
       >
-        <FaGithub />
+        <Icon icon="icomoon-free:github" />
       </a>
       {blog && (
         <a href={blog} aria-label="External link" className="link-icons">
