@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 // Icons
-import { FaGithub } from "react-icons/fa";
+import { Icon } from '@iconify/react';
 // Media
 import GH from "../images/GH.svg";
 // Components
@@ -40,7 +40,7 @@ export default function StyledCard({ theme, image, name, description, url }) {
         <Card.Footer className="text-center">
           <Card.Link href={url}>
             {"View on GitHub "}
-            <FaGithub />
+            <Icon icon="icomoon-free:github" />
           </Card.Link>
         </Card.Footer>
       </Card>

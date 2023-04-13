@@ -6,7 +6,7 @@ import { selectData, selectError, selectIsLoading } from "./allProjectsSlice";
 import { Element } from "react-scroll";
 import styled from "styled-components";
 // Icons
-import { FaGithub, FaSearch } from "react-icons/fa";
+import { Icon } from "@iconify/react";
 // Components
 import {
   Col,
@@ -134,7 +134,7 @@ export default function AllProjects() {
             <Container className="d-flex">
               <Title>
                 <h2>
-                  All <FaGithub /> Projects
+                  All <Icon icon="mdi:github" /> Projects
                 </h2>
                 <div className="underline"></div>
               </Title>
@@ -154,7 +154,7 @@ export default function AllProjects() {
             <Container className="d-flex">
               <Title>
                 <h2>
-                  All <FaGithub /> Projects
+                  All <Icon icon="mdi:github" /> Projects
                 </h2>
                 <div className="underline"></div>
               </Title>
@@ -176,7 +176,7 @@ export default function AllProjects() {
             <Container className="d-flex">
               <Title>
                 <h2>
-                  All <FaGithub /> Projects
+                  All <Icon icon="mdi:github" /> Projects
                 </h2>
                 <div className="underline"></div>
               </Title>
@@ -184,7 +184,7 @@ export default function AllProjects() {
             <Container>
               <InputGroup className="mx-auto mb-3">
                 <InputGroup.Text id="search">
-                  <FaSearch />
+                <Icon icon="ic:round-search" />
                 </InputGroup.Text>
                 <FormControl
                   placeholder="Project name"

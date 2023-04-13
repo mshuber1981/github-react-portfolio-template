@@ -3,8 +3,7 @@ import { useAppContext } from "../appContext";
 import styled, { keyframes } from "styled-components";
 import { Link } from "react-scroll/modules";
 // Icons
-import { GiSunflower, GiMoon } from "react-icons/gi";
-import { FaChevronCircleUp } from "react-icons/fa";
+import { Icon } from '@iconify/react';
 
 // Animations
 export const Spin = keyframes`
@@ -83,7 +82,7 @@ export function ToggleSwitch() {
           closeExpanded();
         }}
       />
-      <div>{theme === "light" ? <GiSunflower /> : <GiMoon />}</div>
+      <div>{theme === "light" ? <Icon icon="game-icons:sunflower" /> : <Icon icon="game-icons:moon" />}</div>
     </StyledSwitch>
   );
 }
@@ -151,7 +150,7 @@ export function BackToTop({ home }) {
   return (
     <StyledDiv ref={up}>
       <Link to={home} className="link-icons">
-        <FaChevronCircleUp />
+        <Icon icon="fa6-solid:circle-chevron-up" />
       </Link>
     </StyledDiv>
   );
