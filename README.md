@@ -1,6 +1,6 @@
-[![GitHub Repo stars](https://img.shields.io/github/stars/mshuber1981/github-react-portfolio-template?color=%2361dbfb&style=for-the-badge&logo=github)](https://github.com/mshuber1981/github-react-portfolio-template/stargazers/) [![GitHub Repo Forks](https://img.shields.io/github/forks/mshuber1981/github-react-portfolio-template?color=%2361dbfb&style=for-the-badge&logo=github&label=Forks)](https://github.com/mshuber1981/github-react-portfolio-template/network/members)
-
 # A React Portfolio Template for GitHub
+
+[![GitHub Repo stars](https://img.shields.io/github/stars/mshuber1981/github-react-portfolio-template?color=%2361dbfb&style=for-the-badge&logo=github)](https://github.com/mshuber1981/github-react-portfolio-template/stargazers/) [![GitHub Repo Forks](https://img.shields.io/github/forks/mshuber1981/github-react-portfolio-template?color=%2361dbfb&style=for-the-badge&logo=github&label=Forks)](https://github.com/mshuber1981/github-react-portfolio-template/network/members)
 
 A performant, accessible, progressive React portfolio template that uses the [GitHub REST API](https://docs.github.com/en/free-pro-team@latest/rest).
 
@@ -10,7 +10,7 @@ Add your GitHub username once and all of your info will automatically be updated
 
 ![Page Speed](/README_images/speed.png)
 
-### <a href="https://mshuber1981.github.io/github-react-portfolio-template/#/">LIVE DEMO</a>
+[###Live Demo](https://mshuber1981.github.io/github-react-portfolio-template/#/)
 
 ![Project Preview](/README_images/preview.png)
 
@@ -26,7 +26,7 @@ Add your GitHub username once and all of your info will automatically be updated
      ```
 
 1. Navigate to the src directory and open data.js
-1. Add your GitHub username ([data.js](https://github.com/mshuber1981/github-react-portfolio-template/blob/0133fcc02ab048fefcf73825d02385ffe27c3721/src/data.js#L23) lines 23-27)
+1. Add your GitHub username ([data.js](https://github.com/mshuber1981/github-react-portfolio-template/blob/main/src/data.js#L14) lines 14-18)
 
    - ```javascript
      /* START HERE
@@ -46,7 +46,7 @@ Add your GitHub username once and all of your info will automatically be updated
 
 ![Projects Preview](/README_images/projects.png)
 
-1. Follow the instructions to update the filteredProjects array ([data.js](https://github.com/mshuber1981/github-react-portfolio-template/blob/0133fcc02ab048fefcf73825d02385ffe27c3721/src/data.js#L94) lines 94-98)
+1. Follow the instructions to update the filteredProjects array ([data.js](https://github.com/mshuber1981/github-react-portfolio-template/blob/main/src/data.js#L85) lines 85-89)
 
    - ```javascript
      /* Projects
@@ -56,14 +56,14 @@ Add your GitHub username once and all of your info will automatically be updated
      export const filteredProjects = ["example-1", "example-2", "example-3"];
      ```
 
-1. Import the projects images you want to use ([data.js](https://github.com/mshuber1981/github-react-portfolio-template/blob/0133fcc02ab048fefcf73825d02385ffe27c3721/src/data.js#L13) lines 13-14) or the default image will be applied
+1. Import the projects images you want to use ([data.js](https://github.com/mshuber1981/github-react-portfolio-template/blob/main/src/data.js#L4) lines 4-5) or the default image will be applied
 
    - ```javascript
      // Projects Images (add your images to the images directory and import below)
      import Logo from "./images/logo.svg";
      ```
 
-1. Follow the instructions to update the projectData array ([data.js](https://github.com/mshuber1981/github-react-portfolio-template/blob/0133fcc02ab048fefcf73825d02385ffe27c3721/src/data.js#L100) lines 100-106)
+1. Follow the instructions to update the projectData array ([data.js](https://github.com/mshuber1981/github-react-portfolio-template/blob/main/src/data.js#L91) lines 91-97)
 
    - ```javascript
      // Replace the defualt GitHub image for matching repos below (images imported above - lines 13-14)
@@ -79,7 +79,7 @@ Add your GitHub username once and all of your info will automatically be updated
 
 ![Contact Preview](/README_images/contact.png)
 
-1. The contact form uses [Formspree](https://formspree.io/), create an account and add your endpoint URL ([data.js](https://github.com/mshuber1981/github-react-portfolio-template/blob/0133fcc02ab048fefcf73825d02385ffe27c3721/src/data.js#L108) lines 108-113)
+1. The contact form uses [Formspree](https://formspree.io/), create an account and add your endpoint URL ([data.js](https://github.com/mshuber1981/github-react-portfolio-template/blob/main/src/data.js#L99) lines 99-104)
 
    - ```javascript
      /* Contact Info
@@ -115,8 +115,6 @@ Checkout the [Wiki](https://github.com/mshuber1981/github-react-portfolio-templa
 - [Updating the About Me section](https://github.com/mshuber1981/github-react-portfolio-template/wiki/Updating-the-About-Me-section)
 - [Updating the Skills section](https://github.com/mshuber1981/github-react-portfolio-template/wiki/Updating-the-Skills-section)
 - [Add a link to your resume](https://github.com/mshuber1981/github-react-portfolio-template/wiki/Updating-the-Skills-section#add-a-link-to-your-resume)
-
-<br />
 
 [Back to top :top:](#a-react-portfolio-template-for-github)
 

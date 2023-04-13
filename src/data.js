@@ -29,7 +29,7 @@ export const moreInfo =
 
 /* Skills
  ************************************************************** 
-  Add or remove skills in the SAME format below, there must be one icon imported above per skill below.
+  Add or remove skills in the SAME format below, choose icons here - https://icon-sets.iconify.design/
 */
 export const skillData = [
   {
