@@ -1,4 +1,4 @@
-// Skills icons - https://react-icons.github.io/react-icons/
+// Skills icons - https://icon-sets.iconify.design/
 import { Icon } from "@iconify/react";
 
 // Projects Images (add your images to the images directory and import below)
@@ -17,7 +17,7 @@ export { HeroDark as Dark };
 */
 export const githubUsername = "Your GitHub username here";
 
-// Blog link icon (imported above)
+// Blog link icon - https://icon-sets.iconify.design/
 export const Blog = <Icon icon="ph:link-bold" />;
 
 /* About Me
@@ -88,7 +88,7 @@ export const resume = null;
 */
 export const filteredProjects = ["example-1", "example-2", "example-3"];
 
-// Replace the defualt GitHub image for matching repos below (images imported above - lines 13-14)
+// Replace the defualt GitHub image for matching repos below (images imported above - lines 4-5)
 export const projectCardImages = [
   {
     name: "example-1",
