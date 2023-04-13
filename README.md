@@ -10,11 +10,11 @@ Add your GitHub username once and all of your info will automatically be updated
 
 ![Page Speed](/README_images/speed.png)
 
-[###Live Demo](https://mshuber1981.github.io/github-react-portfolio-template/#/)
+## [Live Demo](https://mshuber1981.github.io/github-react-portfolio-template/#/)
 
 ![Project Preview](/README_images/preview.png)
 
-## Getting Started
+### Getting Started
 
 1. [Create a repository from this template](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template)
 1. [Clone your repostiory](https://developers.google.com/speed/pagespeed/insights/)
@@ -42,7 +42,7 @@ Add your GitHub username once and all of your info will automatically be updated
      npm start
      ```
 
-## Updating the Projects section
+### Updating the Projects section
 
 ![Projects Preview](/README_images/projects.png)
 
@@ -75,7 +75,7 @@ Add your GitHub username once and all of your info will automatically be updated
      ];
      ```
 
-## Updating the Contact section
+### Updating the Contact section
 
 ![Contact Preview](/README_images/contact.png)
 
@@ -90,7 +90,7 @@ Add your GitHub username once and all of your info will automatically be updated
      export const formspreeUrl = "https://formspree.io/f/YourEndpoint";
      ```
 
-## Deploy
+### Deploy
 
 A helpful guide for Create React App deployments with GitHub Pages can be found [here](https://create-react-app.dev/docs/deployment#github-pages).
 
@@ -106,7 +106,7 @@ A helpful guide for Create React App deployments with GitHub Pages can be found 
      npm run deploy
      ```
 
-## Customization Options
+### Customization Options
 
 Checkout the [Wiki](https://github.com/mshuber1981/github-react-portfolio-template/wiki) for additional customization options:
 
@@ -118,6 +118,6 @@ Checkout the [Wiki](https://github.com/mshuber1981/github-react-portfolio-templa
 
 [Back to top :top:](#a-react-portfolio-template-for-github)
 
-## License
+### License
 
 [MIT](https://choosealicense.com/licenses/mit/)
