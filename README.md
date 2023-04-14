@@ -17,30 +17,30 @@ Add your GitHub username once and all of your info will automatically be updated
 ### Getting Started
 
 1. [Create a repository from this template](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template)
-1. [Clone your repostiory](https://developers.google.com/speed/pagespeed/insights/)
-1. Make sure [Node](https://nodejs.org/en/) is installed
-1. Open your project and install the dependencies
+2. [Clone your repostiory](https://developers.google.com/speed/pagespeed/insights/)
+3. Make sure [Node](https://nodejs.org/en/) is installed
+4. Open your project and install the dependencies
 
-   - ```bash
-     npm install
-     ```
+   ```bash
+   npm install
+   ```
 
-1. Navigate to the src directory and open data.js
-1. Add your GitHub username ([data.js](https://github.com/mshuber1981/github-react-portfolio-template/blob/main/src/data.js#L14) lines 14-18)
+5. Navigate to the src directory and open data.js
+6. Add your GitHub username ([data.js](https://github.com/mshuber1981/github-react-portfolio-template/blob/main/src/data.js#L14) lines 14-18)
 
-   - ```javascript
-     /* START HERE
-      ************************************************************** 
-      Add your GitHub username (string - "YourUsername") below.
-     */
-     export const githubUsername = "Your GitHub username here";
-     ```
+   ```javascript
+   /* START HERE
+   ************************************************************** 
+     Add your GitHub username (string - "YourUsername") below.
+   */
+   export const githubUsername = "Your GitHub username here";
+   ```
 
-1. Start the development server to view the results
+7. Start the development server to view the results
 
-   - ```bash
-     npm start
-     ```
+   ```bash
+   npm start
+   ```
 
 ### Updating the Projects section
 
@@ -48,32 +48,32 @@ Add your GitHub username once and all of your info will automatically be updated
 
 1. Follow the instructions to update the filteredProjects array ([data.js](https://github.com/mshuber1981/github-react-portfolio-template/blob/main/src/data.js#L85) lines 85-89)
 
-   - ```javascript
-     /* Projects
-      ************************************************************** 
-      List the repo names (string - "your-repo-name") you want to include (they will be sorted alphabetically). If empty, only the first 3 will be included.
-     */
-     export const filteredProjects = ["example-1", "example-2", "example-3"];
-     ```
+   ```javascript
+   /* Projects
+   ************************************************************** 
+     List the repo names (string - "your-repo-name") you want to include (they will be sorted alphabetically). If empty, only the first 3 will be included.
+   */
+   export const filteredProjects = ["example-1", "example-2", "example-3"];
+   ```
 
-1. Import the projects images you want to use ([data.js](https://github.com/mshuber1981/github-react-portfolio-template/blob/main/src/data.js#L4) lines 4-5) or the default image will be applied
+2. Import the projects images you want to use ([data.js](https://github.com/mshuber1981/github-react-portfolio-template/blob/main/src/data.js#L4) lines 4-5) or the default image will be applied
 
-   - ```javascript
-     // Projects Images (add your images to the images directory and import below)
-     import Logo from "./images/logo.svg";
-     ```
+   ```javascript
+   // Projects Images (add your images to the images directory and import below)
+   import Logo from "./images/logo.svg";
+   ```
 
-1. Follow the instructions to update the projectData array ([data.js](https://github.com/mshuber1981/github-react-portfolio-template/blob/main/src/data.js#L91) lines 91-97)
+3. Follow the instructions to update the projectData array ([data.js](https://github.com/mshuber1981/github-react-portfolio-template/blob/main/src/data.js#L91) lines 91-97)
 
-   - ```javascript
-     // Replace the defualt GitHub image for matching repos below (images imported above - lines 13-14)
-     export const projectCardImages = [
-       {
-         name: "example-1",
-         image: Logo,
-       },
-     ];
-     ```
+   ```javascript
+   // Replace the defualt GitHub image for matching repos below (images imported above - lines 13-14)
+   export const projectCardImages = [
+     {
+       name: "example-1",
+       image: Logo,
+     },
+   ];
+   ```
 
 ### Updating the Contact section
 
@@ -81,14 +81,14 @@ Add your GitHub username once and all of your info will automatically be updated
 
 1. The contact form uses [Formspree](https://formspree.io/), create an account and add your endpoint URL ([data.js](https://github.com/mshuber1981/github-react-portfolio-template/blob/main/src/data.js#L99) lines 99-104)
 
-   - ```javascript
-     /* Contact Info
-      ************************************************************** 
-      Add your formspree endpoint below.
-      https://formspree.io/
-     */
-     export const formspreeUrl = "https://formspree.io/f/YourEndpoint";
-     ```
+   ```javascript
+   /* Contact Info
+   ************************************************************** 
+     Add your formspree endpoint below.
+     https://formspree.io/
+   */
+   export const formspreeUrl = "https://formspree.io/f/YourEndpoint";
+   ```
 
 ### Deploy
 
@@ -96,15 +96,15 @@ A helpful guide for Create React App deployments with GitHub Pages can be found 
 
 1. Update the homepage value ([package.json](https://github.com/mshuber1981/github-react-portfolio-template/blob/0133fcc02ab048fefcf73825d02385ffe27c3721/package.json#L3) line 3)
 
-   - ```javascript
-     "homepage": "https://YourUsername.github.io/your-app/",
-     ```
+   ```json
+   "homepage": "https://YourUsername.github.io/your-app/",
+   ```
 
-1. Run the deploy command
+2. Run the deploy command
 
-   - ```bash
-     npm run deploy
-     ```
+   ```bash
+   npm run deploy
+   ```
 
 ### Customization Options
 
