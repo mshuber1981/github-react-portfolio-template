@@ -1,5 +1,4 @@
 import React from "react";
-import { useAppContext } from "../appContext";
 import { useSelector } from "react-redux";
 import { selectData as homeData } from "../pages/homeSlice";
 import { selectData, selectError, selectIsLoading } from "./allProjectsSlice";
@@ -48,7 +47,6 @@ export default function AllProjects() {
   const [filteredResults, setFilteredResults] = React.useState([]);
   const [pageItems, setPageItems] = React.useState([]);
   const [activePage, setActivePage] = React.useState(1);
-  const { theme } = useAppContext();
   const isLoading = useSelector(selectIsLoading);
   const error = useSelector(selectError);
   const data = useSelector(selectData);
@@ -184,7 +182,7 @@ export default function AllProjects() {
             <Container>
               <InputGroup className="mx-auto mb-3">
                 <InputGroup.Text id="search">
-                <Icon icon="ic:round-search" />
+                  <Icon icon="ic:round-search" />
                 </InputGroup.Text>
                 <FormControl
                   placeholder="Project name"
@@ -206,15 +204,16 @@ export default function AllProjects() {
                       name,
                       description,
                       html_url,
+                      homepage,
                     }) {
                       return (
                         <Col key={id}>
                           <StyledCard
-                            theme={theme}
                             image={image}
                             name={name}
                             description={description}
                             url={html_url}
+                            demo={homepage}
                           />
                         </Col>
                       );
@@ -225,15 +224,16 @@ export default function AllProjects() {
                       name,
                       description,
                       html_url,
+                      homepage,
                     }) {
                       return (
                         <Col key={id}>
                           <StyledCard
-                            theme={theme}
                             image={image}
                             name={name}
                             description={description}
                             url={html_url}
+                            demo={homepage}
                           />
                         </Col>
                       );
