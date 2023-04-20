@@ -6,13 +6,17 @@ A performant, accessible, progressive React portfolio template that uses the [Gi
 
 Add your GitHub username once and all of your info will automatically be updated. Deploy to GitHub pages in a few simple steps.
 
+## [Live Demo](https://mshuber1981.github.io/github-react-portfolio-template/#/)
+
 [Google PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/)
 
 ![Page Speed](/README_images/speed.png)
 
-## [Live Demo](https://mshuber1981.github.io/github-react-portfolio-template/#/)
+## Light And Dark Themes
 
-![Project Preview](/README_images/preview.png)
+![Hero Light](/README_images/hero.png)
+
+![Hero Dark](/README_images/heroDark.png)
 
 ### Getting Started
 
@@ -44,7 +48,11 @@ Add your GitHub username once and all of your info will automatically be updated
 
 ### Updating the Projects section
 
-![Projects Preview](/README_images/projects.png)
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./README_images/projectsDark.png">
+  <source media="(prefers-color-scheme: light)" srcset="./README_images/projects.png">
+  <img alt="Shows light or dark hero images based on user preferences" src="./README_images/projects.png">
+</picture>
 
 1. Follow the instructions to update the filteredProjects array ([data.js](https://github.com/mshuber1981/github-react-portfolio-template/blob/main/src/data.js#L85) lines 85-89)
 
@@ -77,7 +85,11 @@ Add your GitHub username once and all of your info will automatically be updated
 
 ### Updating the Contact section
 
-![Contact Preview](/README_images/contact.png)
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./README_images/contactDark.png">
+  <source media="(prefers-color-scheme: light)" srcset="./README_images/contact.png">
+  <img alt="Shows light or dark contact form images based on user preferences" src="./README_images/contact.png">
+</picture>
 
 1. The contact form uses [Formspree](https://formspree.io/), create an account and add your endpoint URL ([data.js](https://github.com/mshuber1981/github-react-portfolio-template/blob/main/src/data.js#L99) lines 99-104)
 
