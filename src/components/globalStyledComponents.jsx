@@ -1,5 +1,4 @@
 import React from "react";
-import { useAppContext } from "../appContext";
 import styled, { keyframes } from "styled-components";
 import { Link } from "react-scroll/modules";
 // Icons
@@ -32,66 +31,6 @@ export const Loading = styled.div`
   margin: 1rem auto;
   animation: ${spinner} 0.6s linear infinite;
 `;
-
-// Spacer for fixed Navigation bar
-export const FixedNavSpacer = styled.div`
-  height: var(--nav-height);
-`;
-
-// Theme Toggle
-const StyledSwitch = styled.label`
-  /* Slider pill */
-  display: flex;
-  margin: 0.5rem 0;
-  width: 3.2rem;
-  font-size: 1.5rem;
-  border-radius: 30px;
-  transition: var(--transition);
-  border: 2px solid;
-
-  /* Hide defualt checkbox */
-  input[type="checkbox"] {
-    height: 0;
-    width: 0;
-    opacity: 0;
-  }
-
-  /* Move span when checked */
-  input[type="checkbox"]:checked + div {
-    transform: translateX(100%);
-  }
-
-  div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: var(--transition);
-  }
-`;
-
-export function ToggleSwitch() {
-  const { theme, toggleTheme, closeExpanded } = useAppContext();
-
-  return (
-    <StyledSwitch>
-      <input
-        type="checkbox"
-        aria-label={`Toggle theme, currently ${theme}.`}
-        onClick={() => {
-          toggleTheme();
-          closeExpanded();
-        }}
-      />
-      <div>
-        {theme === "light" ? (
-          <Icon icon="game-icons:sunflower" />
-        ) : (
-          <Icon icon="game-icons:moon" />
-        )}
-      </div>
-    </StyledSwitch>
-  );
-}
 
 // Titles
 export const Title = styled.div`

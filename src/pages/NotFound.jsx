@@ -7,7 +7,6 @@ import Logo from "../images/logo.svg";
 // Components
 import { Container } from "react-bootstrap";
 import { Spin } from "../components/globalStyledComponents";
-import NotFoundNavBar from "../components/SecondaryNavBar";
 
 const StyledNotFound = styled.main`
   display: flex;
@@ -47,7 +46,6 @@ export default function NotFound() {
 
   return (
     <>
-      <NotFoundNavBar />
       <StyledNotFound>
         <Container className="d-flex justify-content-center">
           <span>4</span>

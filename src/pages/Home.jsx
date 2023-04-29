@@ -1,9 +1,7 @@
 import React from "react";
-import { Element } from "react-scroll";
 import { useSelector } from "react-redux";
 import { selectData } from "../pages/homeSlice";
 // Components
-import NavBar from "../components/NavBar";
 import Hero from "../components/Hero";
 import AboutMe from "../components/AboutMe";
 import Skills from "../components/Skills";
@@ -24,10 +22,7 @@ export default function Home() {
 
   return (
     <>
-      <Element name={"Home"} id="home">
-        <NavBar />
-        <Hero />
-      </Element>
+      <Hero />
       <main>
         <AboutMe />
         <Skills />

@@ -8,12 +8,14 @@ import {
 } from "./pages/homeSlice";
 import { fetchGitHubReops } from "./pages/allProjectsSlice";
 import { HashRouter, Routes, Route } from "react-router-dom";
+import { Element } from "react-scroll";
 import { ThemeProvider } from "styled-components";
 // Components
 import { Container } from "react-bootstrap";
 import { Loading } from "./components/globalStyledComponents";
 import ScrollToTop from "./components/ScrollToTop";
 import GlobalStyles from "./components/GlobalStyles";
+import NavBar from "./components/NavBar";
 // Pages
 import Home from "./pages/Home";
 import AllProjects from "./pages/AllProjects";
@@ -80,6 +82,9 @@ export default function App() {
         <ThemeProvider theme={themes[theme]}>
           <ScrollToTop />
           <GlobalStyles />
+          <Element name={"Home"} id="home">
+            <NavBar />
+          </Element>
           <Routes>
             <Route exact path="/" element={<Home />} />
             <Route path="/All-Projects" element={<AllProjects />} />

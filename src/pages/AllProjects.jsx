@@ -2,7 +2,6 @@ import React from "react";
 import { useSelector } from "react-redux";
 import { selectData as homeData } from "../pages/homeSlice";
 import { selectData, selectError, selectIsLoading } from "./allProjectsSlice";
-import { Element } from "react-scroll";
 import styled from "styled-components";
 // Icons
 import { Icon } from "@iconify/react";
@@ -20,7 +19,6 @@ import {
   Title,
   Loading,
 } from "../components/globalStyledComponents";
-import SecondaryNavBar from "../components/SecondaryNavBar";
 import StyledCard from "../components/StyledCard";
 import Footer from "../components/Footer";
 
@@ -126,7 +124,6 @@ export default function AllProjects() {
   if (isLoading) {
     return (
       <>
-        <SecondaryNavBar />
         <main>
           <StyledSection className="d-flex flex-column justify-content-center">
             <Container className="d-flex">
@@ -146,7 +143,6 @@ export default function AllProjects() {
   } else if (error) {
     return (
       <>
-        <SecondaryNavBar />
         <main>
           <StyledSection className="d-flex flex-column justify-content-center">
             <Container className="d-flex">
@@ -166,9 +162,6 @@ export default function AllProjects() {
   } else {
     return (
       <>
-        <Element name={"AllProjects"}>
-          <SecondaryNavBar />
-        </Element>
         <main>
           <StyledSection className="d-flex flex-column justify-content-center">
             <Container className="d-flex">
@@ -273,7 +266,7 @@ export default function AllProjects() {
             </Container>
           </StyledSection>
         </main>
-        <BackToTop home={"AllProjects"} />
+        <BackToTop home={"Home"} />
         <Footer />
       </>
     );
