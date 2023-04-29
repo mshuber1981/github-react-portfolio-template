@@ -30,11 +30,7 @@ export default function SecondaryNavBar() {
               src={Logo}
               width="35"
               height="35"
-              className={
-                theme === "light"
-                  ? "bg-dark rounded-circle"
-                  : "bg-light rounded-circle"
-              }
+              className="rounded-circle"
             />
           </Navbar.Brand>
           <Navbar.Toggle

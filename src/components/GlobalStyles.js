@@ -34,6 +34,11 @@ a:hover {
 
 .navbar {
   border-bottom: var(--border);
+
+  img {
+    background: ${({ theme }) =>
+      theme.name === "light" ? "#27272A" : "#F5F2E8"};
+  }
 }
 
 .link-icons {

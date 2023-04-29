@@ -3,7 +3,7 @@ import { useAppContext } from "../appContext";
 import styled, { keyframes } from "styled-components";
 import { Link } from "react-scroll/modules";
 // Icons
-import { Icon } from '@iconify/react';
+import { Icon } from "@iconify/react";
 
 // Animations
 export const Spin = keyframes`
@@ -82,7 +82,13 @@ export function ToggleSwitch() {
           closeExpanded();
         }}
       />
-      <div>{theme === "light" ? <Icon icon="game-icons:sunflower" /> : <Icon icon="game-icons:moon" />}</div>
+      <div>
+        {theme === "light" ? (
+          <Icon icon="game-icons:sunflower" />
+        ) : (
+          <Icon icon="game-icons:moon" />
+        )}
+      </div>
     </StyledSwitch>
   );
 }
@@ -116,7 +122,7 @@ const StyledDiv = styled.div`
   visibility: hidden;
 
   .link-icons {
-    color: ${({ theme }) => (theme.name === "light" ? "black" : "#EBECF0")};
+    color: ${({ theme }) => (theme.name === "light" ? "#45413C" : "#F5F2E8")};
   }
 
   &.show-up {
