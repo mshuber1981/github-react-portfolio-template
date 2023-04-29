@@ -48,11 +48,7 @@ Add your GitHub username once and all of your info will automatically be updated
 
 ### Updating the Projects section
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./README_images/projectsDark.png">
-  <source media="(prefers-color-scheme: light)" srcset="./README_images/projects.png">
-  <img alt="Shows light or dark hero image based on user preferences" src="./README_images/projects.png">
-</picture>
+![Projects](/README_images/projects.png)
 
 1. Follow the instructions to update the filteredProjects array ([data.js](https://github.com/mshuber1981/github-react-portfolio-template/blob/main/src/data.js#L85) lines 85-89)
 
@@ -85,11 +81,7 @@ Add your GitHub username once and all of your info will automatically be updated
 
 ### Updating the Contact section
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./README_images/contactDark.png">
-  <source media="(prefers-color-scheme: light)" srcset="./README_images/contact.png">
-  <img alt="Shows light or dark contact form image based on user preferences" src="./README_images/contact.png">
-</picture>
+![Projects](/README_images/contact.png)
 
 1. The contact form uses [Formspree](https://formspree.io/), create an account and add your endpoint URL ([data.js](https://github.com/mshuber1981/github-react-portfolio-template/blob/main/src/data.js#L99) lines 99-104)
 
