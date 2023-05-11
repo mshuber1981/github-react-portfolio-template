@@ -6,6 +6,8 @@ A performant, accessible, progressive React portfolio template that uses the [Gi
 
 Add your GitHub username once and all of your info will automatically be updated. Deploy to GitHub pages in a few simple steps.
 
+[![Twitter](https://img.shields.io/badge/Twitter-%231DA1F2.svg?style=for-the-badge&logo=Twitter&logoColor=white) Say thank you!](https://twitter.com/intent/tweet?text=Thanks%20for%20the%20awesome%20Portfolio%20Template!%20https://github.com/mshuber1981/github-react-portfolio-template&via=MikeyHuber1981)
+
 ## [Live Demo](https://mshuber1981.github.io/github-react-portfolio-template/#/)
 
 [Google PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/)
