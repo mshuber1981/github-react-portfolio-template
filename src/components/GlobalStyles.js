@@ -37,7 +37,7 @@ a:hover {
 
   img {
     background: ${({ theme }) =>
-      theme.name === "light" ? "#27272A" : "#F5F2E8"};
+      theme.name === "light" ? "#45413C" : "#797B7B"};
   }
 }
 
@@ -84,7 +84,7 @@ a:hover {
 
 @media screen and (min-width: 800px) {
   .link-icons {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
   .form-group {
       max-width: 750px;
