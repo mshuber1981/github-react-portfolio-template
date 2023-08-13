@@ -50,7 +50,7 @@ Add your GitHub username once and all of your info will automatically be updated
 
 ![Projects](/README_images/projects.png)
 
-1. Follow the instructions to update the filteredProjects array ([data.js](https://github.com/mshuber1981/github-react-portfolio-template/blob/main/src/data.js#L85) lines 85-89)
+1. Follow the instructions to update the filteredProjects array ([data.js](https://github.com/mshuber1981/github-react-portfolio-template/blob/main/src/data.js#L88) lines 88-92)
 
    ```javascript
    /* Projects
@@ -67,7 +67,7 @@ Add your GitHub username once and all of your info will automatically be updated
    import Logo from "./images/logo.svg";
    ```
 
-3. Follow the instructions to update the projectData array ([data.js](https://github.com/mshuber1981/github-react-portfolio-template/blob/main/src/data.js#L91) lines 91-97)
+3. Follow the instructions to update the projectCardImages array ([data.js](https://github.com/mshuber1981/github-react-portfolio-template/blob/main/src/data.js#L94) lines 94-100)
 
    ```javascript
    // Replace the defualt GitHub image for matching repos below (images imported above - lines 13-14)
@@ -83,7 +83,7 @@ Add your GitHub username once and all of your info will automatically be updated
 
 ![Projects](/README_images/contact.png)
 
-1. The contact form uses [Formspree](https://formspree.io/), create an account and add your endpoint URL ([data.js](https://github.com/mshuber1981/github-react-portfolio-template/blob/main/src/data.js#L99) lines 99-104)
+1. The contact form uses [Formspree](https://formspree.io/), create an account and add your endpoint URL ([data.js](https://github.com/mshuber1981/github-react-portfolio-template/blob/main/src/data.js#L102) lines 102-107)
 
    ```javascript
    /* Contact Info
