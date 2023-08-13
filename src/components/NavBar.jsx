@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { useAppContext } from "../appContext";
 import { Link as ScrollLink } from "react-scroll";
 import { Link, useLocation } from "react-router-dom";
@@ -7,25 +8,10 @@ import styled from "styled-components";
 import { Icon } from "@iconify/react";
 // Components
 import { Container, Nav, Navbar } from "react-bootstrap";
-// import { FixedNavSpacer, ToggleSwitch } from "./globalStyledComponents";
 // Images
-import Logo from "../images/logo.svg";
+import Logo from "./defaultNavLogo.svg";
 
-const navLinks = {
-  routes: [
-    { id: "1R", name: "Home", route: "/" },
-    { id: "2R", name: "All Projects", route: "/All-Projects" },
-  ],
-  to: [
-    { id: "1T", name: "Home", to: "Home" },
-    { id: "2T", name: "About Me", to: "About" },
-    { id: "3T", name: "Skills", to: "Skills" },
-    { id: "4T", name: "Projects", to: "Projects" },
-    { id: "5T", name: "Contact", to: "Contact" },
-  ],
-};
-
-// Theme Toggle
+// #region styled-components
 const StyledSwitch = styled.label`
   /* Slider pill */
   display: flex;
@@ -55,7 +41,6 @@ const StyledSwitch = styled.label`
   }
 `;
 
-// Spacer for fixed Navigation bar
 const FixedNavSpacer = styled.div`
   height: var(--nav-height);
 `;
@@ -80,10 +65,33 @@ function ThemeToggle() {
     </StyledSwitch>
   );
 }
+// #endregion
 
-export default function NavBar() {
+// #region component
+const propTypes = {
+  Logo: PropTypes.node.isRequired,
+};
+
+const defaultProps = {
+  Logo: Logo,
+};
+
+export default function NavBar({ Logo }) {
   const { theme, isExpanded, closeExpanded, toggleExpanded } = useAppContext();
   const { pathname } = useLocation();
+  const navLinks = {
+    routes: [
+      { id: "1R", name: "Home", route: "/" },
+      { id: "2R", name: "All Projects", route: "/All-Projects" },
+    ],
+    to: [
+      { id: "1T", name: "Home", to: "Home" },
+      { id: "2T", name: "About Me", to: "About" },
+      { id: "3T", name: "Skills", to: "Skills" },
+      { id: "4T", name: "Projects", to: "Projects" },
+      { id: "5T", name: "Contact", to: "Contact" },
+    ],
+  };
 
   return (
     <>
@@ -100,7 +108,7 @@ export default function NavBar() {
         <Container>
           <Navbar.Brand>
             <img
-              alt="React Logo"
+              alt="Logo"
               src={Logo}
               width="35"
               height="35"
@@ -156,3 +164,7 @@ export default function NavBar() {
     </>
   );
 }
+
+NavBar.propTypes = propTypes;
+NavBar.defaultProps = defaultProps;
+// #endregion

@@ -10,6 +10,8 @@ import { fetchGitHubReops } from "./pages/allProjectsSlice";
 import { HashRouter, Routes, Route } from "react-router-dom";
 import { Element } from "react-scroll";
 import { ThemeProvider } from "styled-components";
+// Data
+import { navLogo } from "./data";
 // Components
 import { Container } from "react-bootstrap";
 import { Loading } from "./components/globalStyledComponents";
@@ -83,7 +85,7 @@ export default function App() {
           <ScrollToTop />
           <GlobalStyles />
           <Element name={"Home"} id="home">
-            <NavBar />
+            <NavBar Logo={navLogo} />
           </Element>
           <Routes>
             <Route exact path="/" element={<Home />} />
