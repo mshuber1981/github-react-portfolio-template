@@ -30,7 +30,7 @@ Add your GitHub username once and all of your info will automatically be updated
    ```
 
 5. Navigate to the src directory and open data.js
-6. Add your GitHub username ([data.js](https://github.com/mshuber1981/github-react-portfolio-template/blob/main/src/data.js#L14) lines 14-18)
+6. Add your GitHub username ([data.js](https://github.com/mshuber1981/github-react-portfolio-template/blob/main/src/data.js#L17) lines 17-21)
 
    ```javascript
    /* START HERE
@@ -50,7 +50,7 @@ Add your GitHub username once and all of your info will automatically be updated
 
 ![Projects](/README_images/projects.png)
 
-1. Follow the instructions to update the filteredProjects array ([data.js](https://github.com/mshuber1981/github-react-portfolio-template/blob/main/src/data.js#L88) lines 88-92)
+1. Follow the instructions to update the filteredProjects array ([data.js](https://github.com/mshuber1981/github-react-portfolio-template/blob/main/src/data.js#L91) lines 91-95)
 
    ```javascript
    /* Projects
@@ -60,17 +60,17 @@ Add your GitHub username once and all of your info will automatically be updated
    export const filteredProjects = ["example-1", "example-2", "example-3"];
    ```
 
-2. Import the projects images you want to use ([data.js](https://github.com/mshuber1981/github-react-portfolio-template/blob/main/src/data.js#L4) lines 4-5) or the default image will be applied
+2. Import the projects images you want to use ([data.js](https://github.com/mshuber1981/github-react-portfolio-template/blob/main/src/data.js#L7) lines 7-8) or the default image will be applied
 
    ```javascript
    // Projects Images (add your images to the images directory and import below)
    import Logo from "./images/logo.svg";
    ```
 
-3. Follow the instructions to update the projectCardImages array ([data.js](https://github.com/mshuber1981/github-react-portfolio-template/blob/main/src/data.js#L94) lines 94-100)
+3. Follow the instructions to update the projectCardImages array ([data.js](https://github.com/mshuber1981/github-react-portfolio-template/blob/main/src/data.js#L97) lines 97-103)
 
    ```javascript
-   // Replace the defualt GitHub image for matching repos below (images imported above - lines 13-14)
+   // Replace the defualt GitHub image for matching repos below (images imported above - lines 7-8)
    export const projectCardImages = [
      {
        name: "example-1",
@@ -83,7 +83,7 @@ Add your GitHub username once and all of your info will automatically be updated
 
 ![Projects](/README_images/contact.png)
 
-1. The contact form uses [Formspree](https://formspree.io/), create an account and add your endpoint URL ([data.js](https://github.com/mshuber1981/github-react-portfolio-template/blob/main/src/data.js#L102) lines 102-107)
+1. The contact form uses [Formspree](https://formspree.io/), create an account and add your endpoint URL ([data.js](https://github.com/mshuber1981/github-react-portfolio-template/blob/main/src/data.js#L105) lines 105-110)
 
    ```javascript
    /* Contact Info
@@ -119,6 +119,7 @@ Checkout the [Wiki](https://github.com/mshuber1981/github-react-portfolio-templa
 - [Updating the About Me section](https://github.com/mshuber1981/github-react-portfolio-template/wiki/Updating-the-About-Me-section)
 - [Updating the Skills section](https://github.com/mshuber1981/github-react-portfolio-template/wiki/Updating-the-Skills-section)
 - [Add a link to your resume](https://github.com/mshuber1981/github-react-portfolio-template/wiki/Updating-the-Skills-section#add-a-link-to-your-resume)
+- [Updating the Navbar Logo](https://github.com/mshuber1981/github-react-portfolio-template/wiki/Updating-the-Navbar-Logo)
 
 [Back to top :top:](#a-react-portfolio-template-for-github)
 
