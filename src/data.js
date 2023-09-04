@@ -94,7 +94,7 @@ export const resume = null;
 */
 export const filteredProjects = ["example-1", "example-2", "example-3"];
 
-// Replace the defualt GitHub image for matching repos below (images imported above - lines 4-5)
+// Replace the defualt GitHub image for matching repos below (images imported above - lines 7-8)
 export const projectCardImages = [
   {
     name: "example-1",
