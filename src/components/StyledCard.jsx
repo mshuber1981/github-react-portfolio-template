@@ -46,7 +46,7 @@ export default function StyledCard({ image, name, description, url, demo }) {
         <Card.Body className="overflow-auto text-center">
           <Card.Title>{name}</Card.Title>
           <Card.Text>{description}</Card.Text>
-          {demo !== "" ? (
+          {demo !== "" && demo !== null ? (
             <Card.Link href={demo}>
               {"Live Demo "}
               <Icon icon="icon-park-outline:code-computer" />
