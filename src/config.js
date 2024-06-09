@@ -6,6 +6,10 @@ import { Icon } from "@iconify/react";
 
 // Projects Images (add your images to the images directory and import below)
 import Logo from "./images/logo.svg";
+import Gears from "./images/gears.svg";
+import fcc from "./images/free-code-camp.svg";
+import Amplify from "./images/aws-amplify.svg";
+import Form from "./images/form-line.svg";
 
 // Hero Images (add your images to the /images directory with the same names)
 import HeroLight from "./images/hero-light.jpg";
@@ -18,13 +22,13 @@ export { HeroDark as Dark };
  **************************************************************
   Add your GitHub username (string - "YourUsername") below.
 */
-export const githubUsername = "Your GitHub username here";
+export const githubUsername = null;
 
 // Navbar Logo image
-export const navLogo = undefined;
+export const navLogo = null;
 
 // Blog link icon - https://icon-sets.iconify.design/
-export const Blog = <Icon icon="ph:link-bold" />;
+export const Blog = null;
 
 /* About Me
  **************************************************************
@@ -92,12 +96,44 @@ export const resume = null;
  ************************************************************** 
   List the repo names (string - "your-repo-name") you want to include (they will be sorted alphabetically). If empty, only the first 3 will be included.
 */
-export const filteredProjects = ["example-1", "example-2", "example-3"];
+export const filteredProjects = [
+  "github-react-portfolio-template",
+  "work-life",
+  "FCC-Front-End-Libraries-Projects",
+];
 
 // Replace the defualt GitHub image for matching repos below (images imported above - lines 7-8)
 export const projectCardImages = [
   {
-    name: "example-1",
+    name: "github-react-portfolio-template",
+    image: Logo,
+  },
+  {
+    name: "work-life",
+    image: Gears,
+  },
+  {
+    name: "FCC-Front-End-Libraries-Projects",
+    image: fcc,
+  },
+  {
+    name: "FCC-JavaScript-Algorithms-and-Data-Structures-Projects",
+    image: fcc,
+  },
+  {
+    name: "Portfolio",
+    image: Amplify,
+  },
+  {
+    name: "react-contact-form",
+    image: Form,
+  },
+  {
+    name: "FCC-Responsive-Web-Design-Projects",
+    image: fcc,
+  },
+  {
+    name: "CRA-Starter",
     image: Logo,
   },
 ];
@@ -107,4 +143,4 @@ export const projectCardImages = [
   Add your formspree endpoint below.
   https://formspree.io/
 */
-export const formspreeUrl = "https://formspree.io/f/YourEndpoint";
+export const formspreeUrl = null;

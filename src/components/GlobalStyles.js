@@ -13,7 +13,7 @@ Variables
   --primary-dark: #316e7e;
   --border: 1px solid #61DBFB;
   --transition: all 0.3s linear;
-  --nav-height: 61px;
+  --nav-height: 55px;
   --min-footer-height: 11vh;
   --card-height: 29rem;
 }
@@ -26,6 +26,14 @@ Global Styles
 body {
   background: ${({ theme }) => theme.background};
   color: ${({ theme }) => theme.color};
+}
+
+main {
+  min-height: calc(100vh - 2 * var(--nav-height) - 2rem);
+}
+
+section {
+  margin: 1rem 0;
 }
 
 a:hover {

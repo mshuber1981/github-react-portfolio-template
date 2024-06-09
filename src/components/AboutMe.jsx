@@ -1,13 +1,14 @@
+import React from "react";
+// Styles
 import styled from "styled-components";
-import { useSelector } from "react-redux";
-import { selectData } from "../pages/homeSlice";
-import { Element } from "react-scroll";
-// Data
-import { moreInfo } from "../data";
+// State
+import PropTypes from "prop-types";
 // Components
+import { Element } from "react-scroll";
 import { Col, Container, Row } from "react-bootstrap";
-import { Title } from "./globalStyledComponents";
+import Title from "./Title";
 
+// #region styled-components
 const StyledAboutMe = styled.section`
   p {
     font-size: 1.25rem;
@@ -17,24 +18,27 @@ const StyledAboutMe = styled.section`
     height: 18rem;
   }
 `;
+// #endregion
 
-export default function AboutMe() {
-  const { avatar_url, bio } = useSelector(selectData);
+// #region component
+const propTypes = {
+  avatar_url: PropTypes.string.isRequired,
+  bio: PropTypes.string,
+  moreInfo: PropTypes.string,
+};
 
+const AboutMe = ({ avatar_url, bio, moreInfo }) => {
   return (
     <Element name={"About"} id="about">
       <StyledAboutMe className="section">
         <Container>
-          <Container className="d-flex">
-            <Title>
-              <h2>About Me</h2>
-              <div className="underline"></div>
-            </Title>
+          <Container className="d-flex justify-content-center">
+            <Title size={"h2"} text={"About Me"} />
           </Container>
           <Row className="align-items-center mt-5">
             <Col className="d-flex flex-column text-center">
               <Container>
-                <p>{bio}</p>
+                {bio && <p>{bio}</p>}
                 {moreInfo && <p>{moreInfo}</p>}
               </Container>
             </Col>
@@ -52,4 +56,9 @@ export default function AboutMe() {
       </StyledAboutMe>
     </Element>
   );
-}
+};
+
+AboutMe.propTypes = propTypes;
+// #endregion
+
+export default AboutMe;

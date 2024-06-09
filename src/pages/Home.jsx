@@ -1,36 +1,43 @@
 import React from "react";
-import { useSelector } from "react-redux";
-import { selectData } from "../pages/homeSlice";
+// State
+import { useGetUsersQuery } from "../app/apiSlice";
 // Components
 import Hero from "../components/Hero";
 import AboutMe from "../components/AboutMe";
 import Skills from "../components/Skills";
 import Projects from "../components/Projects";
 import Contact from "../components/Contact";
-import { BackToTop } from "../components/globalStyledComponents";
-import Footer from "../components/Footer";
+import BackToTop from "../components/BackToTop";
+// Config
+import { filteredProjects, moreInfo } from "../config";
+// Utils
+import { updateTitle } from "../utils";
 
-export default function Home() {
-  const { name } = useSelector(selectData);
+// #region component
+const Home = () => {
+  const { data: userData } = useGetUsersQuery();
 
-  React.useEffect(
-    function () {
-      document.title = `${name} | Portfolio`;
-    },
-    [name]
-  );
+  React.useEffect(() => {
+    updateTitle(`${userData.name} | Portfolio`);
+  }, [userData]);
 
   return (
     <>
-      <Hero />
+      <Hero name={userData.name} />
       <main>
-        <AboutMe />
+        <AboutMe
+          avatar_url={userData.avatar_url}
+          bio={userData.bio}
+          moreInfo={moreInfo}
+        />
         <Skills />
-        <Projects />
+        <Projects filteredProjects={filteredProjects} />
         <Contact />
       </main>
-      <BackToTop home={"Home"} />
-      <Footer />
+      <BackToTop />
     </>
   );
-}
+};
+// #endregion
+
+export default Home;

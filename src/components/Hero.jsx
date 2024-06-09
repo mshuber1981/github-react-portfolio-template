@@ -1,16 +1,25 @@
-import { useSelector } from "react-redux";
-import { selectData } from "../pages/homeSlice";
-import { Link } from "react-scroll";
-import styled from "styled-components";
+import React from "react";
+// Styles
+import styled, { keyframes } from "styled-components";
 // Icons
 import { Icon } from "@iconify/react";
-// Media
+// Images
 import Logo from "../images/logo.svg";
-import { Light, Dark } from "../data";
+import { Light, Dark } from "../config";
 // Components
+import { Link } from "react-scroll";
 import { Col, Container, Row } from "react-bootstrap";
-import { Spin } from "./globalStyledComponents";
 import SocialLinks from "./SocialLinks";
+
+// #region styled-components
+const spin = keyframes`
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+`;
 
 const StyledHero = styled.header`
   position: relative;
@@ -55,7 +64,7 @@ const StyledHero = styled.header`
 
   @media (prefers-reduced-motion: no-preference) {
     .hero-img {
-      animation: ${Spin} infinite 20s linear;
+      animation: ${spin} infinite 20s linear;
     }
   }
 
@@ -79,16 +88,18 @@ const StyledHero = styled.header`
     }
   }
 `;
+// #endregion
 
-export default function Hero() {
-  const { name } = useSelector(selectData);
-
+// #region component
+const Hero = ({ name }) => {
   return (
     <StyledHero>
       <Container>
         <Row className="align-items-center text-center">
           <Col>
-            <h1 className="mb-3 display-3 title">{name}</h1>
+            <h1 className="mb-3 display-3 title">
+              {name === null ? "null" : name}
+            </h1>
             <div className="d-flex align-items-center justify-content-center">
               <SocialLinks />
             </div>
@@ -111,4 +122,7 @@ export default function Hero() {
       </Container>
     </StyledHero>
   );
-}
+};
+// #endregion
+
+export default Hero;

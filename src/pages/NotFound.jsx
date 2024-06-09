@@ -1,19 +1,29 @@
 import React from "react";
-import { useSelector } from "react-redux";
-import { selectData } from "../pages/homeSlice";
-import styled from "styled-components";
-// Media
-import Logo from "../images/logo.svg";
+// Styles
+import styled, { keyframes } from "styled-components";
 // Components
 import { Container } from "react-bootstrap";
-import { Spin } from "../components/globalStyledComponents";
+// Images
+import Logo from "../images/logo.svg";
+// Utils
+import { updateTitle } from "../utils";
+
+// #region styled-components
+const Spin = keyframes`
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+`;
 
 const StyledNotFound = styled.main`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: calc(100vh - var(--nav-height));
+  min-height: calc(100vh - 2 * var(--nav-height) - 1rem);
 
   span {
     font-size: 5rem;
@@ -33,16 +43,13 @@ const StyledNotFound = styled.main`
     }
   }
 `;
+// #endregion
 
-export default function NotFound() {
-  const { name } = useSelector(selectData);
-
-  React.useEffect(
-    function () {
-      document.title = `${name} | Portfolio`;
-    },
-    [name]
-  );
+// #region component
+const NotFound = () => {
+  React.useEffect(() => {
+    updateTitle("Not found...");
+  }, []);
 
   return (
     <>
@@ -56,4 +63,7 @@ export default function NotFound() {
       </StyledNotFound>
     </>
   );
-}
+};
+// #endregion
+
+export default NotFound;

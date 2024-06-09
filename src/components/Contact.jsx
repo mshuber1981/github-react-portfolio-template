@@ -1,25 +1,25 @@
 import React from "react";
-import { Element } from "react-scroll";
+// Styles
 import styled from "styled-components";
 // Components
+import { Element } from "react-scroll";
+import Title from "./Title";
 import { Container } from "react-bootstrap";
-import { Title } from "./globalStyledComponents";
 import ContactForm from "./ContactForm";
 
+// #region styled-components
 const StyledSection = styled.section`
-  min-height: 89vh;
-  padding-top: var(--nav-height);
+  min-height: calc(100vh - var(--nav-height) - 2rem);
 `;
+// #endregion
 
-export default function Contact() {
+// #region component
+const Contact = () => {
   return (
     <Element name={"Contact"} id="contact">
       <StyledSection className="d-flex flex-column justify-content-center">
-        <Container className="d-flex">
-          <Title>
-            <h2>Contact Me</h2>
-            <div className="underline"></div>
-          </Title>
+        <Container className="d-flex justify-content-center">
+          <Title size={"h2"} text={"Contact"} />
         </Container>
         <Container>
           <ContactForm />
@@ -27,4 +27,7 @@ export default function Contact() {
       </StyledSection>
     </Element>
   );
-}
+};
+// #endregion
+
+export default Contact;
