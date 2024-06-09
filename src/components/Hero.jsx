@@ -1,6 +1,8 @@
 import React from "react";
 // Styles
 import styled, { keyframes } from "styled-components";
+// State
+import PropTypes from "prop-types";
 // Icons
 import { Icon } from "@iconify/react";
 // Images
@@ -91,6 +93,10 @@ const StyledHero = styled.header`
 // #endregion
 
 // #region component
+const propTypes = {
+  name: PropTypes.string,
+};
+
 const Hero = ({ name }) => {
   return (
     <StyledHero>
@@ -123,6 +129,8 @@ const Hero = ({ name }) => {
     </StyledHero>
   );
 };
+
+Hero.propTypes = propTypes;
 // #endregion
 
 export default Hero;
