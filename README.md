@@ -21,7 +21,7 @@ Add your GitHub username once and all of your info will automatically be updated
 ### Getting Started
 
 1. [Create a repository from this template](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template)
-2. [Clone your repository](https://developers.google.com/speed/pagespeed/insights/)
+2. [Clone your new repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository)
 3. Make sure [Node](https://nodejs.org/en/) is installed
 4. Open your project and install the dependencies
 
@@ -29,8 +29,8 @@ Add your GitHub username once and all of your info will automatically be updated
    npm install
    ```
 
-5. Navigate to the src directory and open data.js
-6. Add your GitHub username ([data.js](https://github.com/mshuber1981/github-react-portfolio-template/blob/main/src/data.js#L17) lines 17-21)
+5. Navigate to the src directory and open src/config.js
+6. Add your GitHub username ([config.js](https://github.com/mshuber1981/github-react-portfolio-template/blob/main/src/config.js#L18) line 18)
 
    ```javascript
    /* START HERE
@@ -46,44 +46,11 @@ Add your GitHub username once and all of your info will automatically be updated
    npm start
    ```
 
-### Updating the Projects section
-
-![Projects](/README_images/projects.png)
-
-1. Follow the instructions to update the filteredProjects array ([data.js](https://github.com/mshuber1981/github-react-portfolio-template/blob/main/src/data.js#L91) lines 91-95)
-
-   ```javascript
-   /* Projects
-   ************************************************************** 
-     List the repo names (string - "your-repo-name") you want to include (they will be sorted alphabetically). If empty, only the first 3 will be included.
-   */
-   export const filteredProjects = ["example-1", "example-2", "example-3"];
-   ```
-
-2. Import the projects images you want to use ([data.js](https://github.com/mshuber1981/github-react-portfolio-template/blob/main/src/data.js#L7) lines 7-8) or the default image will be applied
-
-   ```javascript
-   // Projects Images (add your images to the images directory and import below)
-   import Logo from "./images/logo.svg";
-   ```
-
-3. Follow the instructions to update the projectCardImages array ([data.js](https://github.com/mshuber1981/github-react-portfolio-template/blob/main/src/data.js#L97) lines 97-103)
-
-   ```javascript
-   // Replace the defualt GitHub image for matching repos below (images imported above - lines 7-8)
-   export const projectCardImages = [
-     {
-       name: "example-1",
-       image: Logo,
-     },
-   ];
-   ```
-
 ### Updating the Contact section
 
 ![Projects](/README_images/contact.png)
 
-1. The contact form uses [Formspree](https://formspree.io/), create an account and add your endpoint URL ([data.js](https://github.com/mshuber1981/github-react-portfolio-template/blob/main/src/data.js#L105) lines 105-110)
+1. The contact form uses [Formspree](https://formspree.io/), create an account and add your endpoint URL ([config.js](https://github.com/mshuber1981/github-react-portfolio-template/blob/main/src/config.js#L114) line 114)
 
    ```javascript
    /* Contact Info
@@ -98,7 +65,7 @@ Add your GitHub username once and all of your info will automatically be updated
 
 A helpful guide for Create React App deployments with GitHub Pages can be found [here](https://create-react-app.dev/docs/deployment#github-pages).
 
-1. Update the homepage value ([package.json](https://github.com/mshuber1981/github-react-portfolio-template/blob/0133fcc02ab048fefcf73825d02385ffe27c3721/package.json#L3) line 3)
+1. Update the homepage value ([package.json](https://github.com/mshuber1981/github-react-portfolio-template/blob/main/package.json#L3) line 3)
 
    ```json
    "homepage": "https://YourUsername.github.io/your-app/",
@@ -114,13 +81,11 @@ A helpful guide for Create React App deployments with GitHub Pages can be found 
 
 Checkout the [Wiki](https://github.com/mshuber1981/github-react-portfolio-template/wiki) for additional customization options:
 
-- [Updating the Hero images](https://github.com/mshuber1981/github-react-portfolio-template/wiki/Updating-the-Hero-images)
-- [Add a custom Blog icon](https://github.com/mshuber1981/github-react-portfolio-template/wiki/Updating-the-Hero-images#add-a-custom-blog-icon)
+- [Updating the Navbar Logo](https://github.com/mshuber1981/github-react-portfolio-template/wiki/Updating-the-Navbar-Logo)
+- [Updating the Main section](https://github.com/mshuber1981/github-react-portfolio-template/wiki/Updating-the-Main-section)
 - [Updating the About Me section](https://github.com/mshuber1981/github-react-portfolio-template/wiki/Updating-the-About-Me-section)
 - [Updating the Skills section](https://github.com/mshuber1981/github-react-portfolio-template/wiki/Updating-the-Skills-section)
-- [Add a link to your resume](https://github.com/mshuber1981/github-react-portfolio-template/wiki/Updating-the-Skills-section#add-a-link-to-your-resume)
-- [Updating the Navbar Logo](https://github.com/mshuber1981/github-react-portfolio-template/wiki/Updating-the-Navbar-Logo)
-- [Including a Live Demo link on your project cards](https://github.com/mshuber1981/github-react-portfolio-template/wiki/Including-a-Live-Demo-link-on-your-project-cards)
+- [Updating the Projects section](https://github.com/mshuber1981/github-react-portfolio-template/wiki/Updating-the-Projects-section)
 
 [Back to top :top:](#a-react-portfolio-template-for-github)
 
