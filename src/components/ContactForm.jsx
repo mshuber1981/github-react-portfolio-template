@@ -40,9 +40,7 @@ const ContactForm = () => {
       try {
         const response = await postData(formspreeUrl, data);
         if (!response.ok) {
-          throw new Error(
-            `${response.status} ${response.statusText}, check formspreeUrl in data.js`
-          );
+          throw new Error(`${response.status}: check formspreeUrl in data.js`);
         }
         setIsProcessing(false);
         setIsValidated(false);
