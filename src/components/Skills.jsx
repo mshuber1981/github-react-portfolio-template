@@ -1,22 +1,24 @@
+import React from "react";
+// State
 import { useAppContext } from "../appContext";
-import { Element } from "react-scroll";
-// Data
-import { skillData, resume } from "../data";
 // Components
+import { Element } from "react-scroll";
 import { Button, Col, Container, Row } from "react-bootstrap";
-import { Title } from "./globalStyledComponents";
+import Title from "./Title";
+// Config
+import { skillData, resume } from "../config";
 
-export default function Skills() {
+// #region component
+const Skills = () => {
   const { theme } = useAppContext();
 
   return (
     <Element name={"Skills"} id="skills">
       <section className="section">
         <Container className="text-center">
-          <Title>
-            <h2>Skills</h2>
-            <div className="underline"></div>
-          </Title>
+          <Container className="d-flex justify-content-center">
+            <Title size={"h2"} text={"Skills"} />
+          </Container>
           <Row className="mt-3 align-items-center">
             {skillData.map((skills) => {
               return (
@@ -44,4 +46,7 @@ export default function Skills() {
       </section>
     </Element>
   );
-}
+};
+// #endregion
+
+export default Skills;

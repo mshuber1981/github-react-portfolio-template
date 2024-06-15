@@ -1,6 +1,8 @@
 import React from "react";
 // Styles
 import styled from "styled-components";
+// State
+import PropTypes from "prop-types";
 // Icons
 import { Icon } from "@iconify/react";
 // Images
@@ -9,7 +11,7 @@ import GH from "../images/GH.svg";
 import { Card } from "react-bootstrap";
 
 // #region styled-components
-const StyledCardComponent = styled.div`
+const StyledCard = styled.div`
   .card {
     color: ${({ theme }) => theme.color};
     background: ${({ theme }) => (theme.name === "light" ? "" : "#797B7B")};
@@ -37,9 +39,17 @@ const StyledCardComponent = styled.div`
 // #endregion
 
 // #region component
-const StyledCard = ({ image, name, description, url, demo }) => {
+const propTypes = {
+  demo: PropTypes.string,
+  description: PropTypes.string,
+  image: PropTypes.node,
+  name: PropTypes.string.isRequired,
+  url: PropTypes.string.isRequired,
+};
+
+const ProjectCard = ({ demo, description, image, name, url }) => {
   return (
-    <StyledCardComponent>
+    <StyledCard>
       <Card>
         <Card.Img
           variant="top"
@@ -50,7 +60,7 @@ const StyledCard = ({ image, name, description, url, demo }) => {
         <Card.Body className="overflow-auto text-center">
           <Card.Title>{name}</Card.Title>
           <Card.Text>{description}</Card.Text>
-          {demo !== "" && demo !== null ? (
+          {demo !== (undefined && null && "") ? (
             <Card.Link href={demo}>
               {"Live Demo "}
               <Icon icon="icon-park-outline:code-computer" />
@@ -64,9 +74,11 @@ const StyledCard = ({ image, name, description, url, demo }) => {
           </Card.Link>
         </Card.Footer>
       </Card>
-    </StyledCardComponent>
+    </StyledCard>
   );
 };
+
+ProjectCard.propTypes = propTypes;
 // #endregion
 
-export default StyledCard;
+export default ProjectCard;

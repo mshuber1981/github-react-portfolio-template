@@ -1,11 +1,15 @@
 import React from "react";
+// State
 import { useAppContext } from "../appContext";
-// Data
-import { formspreeUrl } from "../data";
 // Components
 import { Alert, Button, Form, Spinner } from "react-bootstrap";
+// Config
+import { formspreeUrl } from "../config";
+// Util
+import { postData } from "../utils";
 
-export default function ContactForm() {
+// #region component
+const ContactForm = () => {
   const [isValidated, setIsValidated] = React.useState(false);
   const [isProcessing, setIsProcessing] = React.useState(false);
   const [success, setSuccess] = React.useState(false);
@@ -13,19 +17,7 @@ export default function ContactForm() {
   const [dangerMessage, setDangerMessage] = React.useState(null);
   const { theme } = useAppContext();
 
-  async function postData(data) {
-    const response = await fetch(formspreeUrl, {
-      method: "POST",
-      body: JSON.stringify(data),
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
-      },
-    });
-    return response;
-  }
-
-  async function handleSubmit(event) {
+  const handleSubmit = async (event) => {
     const form = event.currentTarget;
     setSuccess(false);
     setDanger(false);
@@ -46,11 +38,9 @@ export default function ContactForm() {
       event.persist();
       setIsProcessing(true);
       try {
-        const response = await postData(data);
+        const response = await postData(formspreeUrl, data);
         if (!response.ok) {
-          throw new Error(
-            `${response.status} ${response.statusText}, check formspreeUrl in data.js`
-          );
+          throw new Error(`${response.status}: check formspreeUrl in data.js`);
         }
         setIsProcessing(false);
         setIsValidated(false);
@@ -64,7 +54,7 @@ export default function ContactForm() {
         setDanger(true);
       }
     }
-  }
+  };
 
   return (
     <>
@@ -109,7 +99,6 @@ export default function ContactForm() {
               )}
             </Button>
           )}
-
           <Alert
             show={success}
             variant="success"
@@ -128,11 +117,14 @@ export default function ContactForm() {
           </Alert>
           <Alert show={!formspreeUrl} variant="danger">
             <Alert.Heading>
-              You must provide a valid formspree url in data.js
+              You must provide a valid formspree url in src/config.js
             </Alert.Heading>
           </Alert>
         </Form.Group>
       </Form>
     </>
   );
-}
+};
+// #endregion
+
+export default ContactForm;

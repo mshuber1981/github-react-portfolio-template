@@ -1,9 +1,12 @@
+import React from "react";
+// Styles
 import styled from "styled-components";
 // Components
 import SocialLinks from "./SocialLinks";
 
+// #region styled-components
 const StyledFooter = styled.footer`
-  min-height: var(--min-footer-height);
+  height: calc(var(--nav-height) + 1rem);
   background: var(--primary);
 
   a {
@@ -14,11 +17,16 @@ const StyledFooter = styled.footer`
     }
   }
 `;
+// #endregion
 
-export default function Footer() {
+// #region component
+const Footer = () => {
   return (
     <StyledFooter className="d-flex align-items-center justify-content-center p-2">
       <SocialLinks />
     </StyledFooter>
   );
-}
+};
+// #endregion
+
+export default Footer;

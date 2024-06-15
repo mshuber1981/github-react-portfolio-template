@@ -1,30 +1,34 @@
 // Skills icons - https://icon-sets.iconify.design/
 import { Icon } from "@iconify/react";
 
-// Navbar Logo image (uncomment below and import your image)
+// Navbar Logo image (add your image to the src/images directory and uncomment the line below to import your image)
 // import newLogo from "./images/yourFileName"
-
-// Projects Images (add your images to the images directory and import below)
-import Logo from "./images/logo.svg";
 
 // Hero Images (add your images to the /images directory with the same names)
 import HeroLight from "./images/hero-light.jpg";
 import HeroDark from "./images/hero-dark.jpg";
-// If you change the import names above then you need to change the export names below
-export { HeroLight as Light };
-export { HeroDark as Dark };
+
+// Projects Images (add your images to the images directory and import below)
+import Logo from "./images/logo.svg";
 
 /* START HERE
  **************************************************************
   Add your GitHub username (string - "YourUsername") below.
 */
-export const githubUsername = "Your GitHub username here";
+export const githubUsername = "mshuber1981";
 
 // Navbar Logo image
-export const navLogo = undefined;
+export const navLogo = null;
 
-// Blog link icon - https://icon-sets.iconify.design/
-export const Blog = <Icon icon="ph:link-bold" />;
+/* Main
+ ************************************************************** 
+  Add a custom blog icon or update the hero images for the Main section.
+*/
+export const Blog = null;
+
+// Hero images (imported above - lines 8-9)
+export { HeroLight as Light };
+export { HeroDark as Dark };
 
 /* About Me
  **************************************************************
