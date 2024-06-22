@@ -112,3 +112,6 @@ export const projectCardImages = [
   https://formspree.io/
 */
 export const formspreeUrl = "https://formspree.io/f/YourEndpoint";
+
+// Footer icons theme (light or dark)
+export const footerTheme = "dark";

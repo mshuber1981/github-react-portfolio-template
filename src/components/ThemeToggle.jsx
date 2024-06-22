@@ -2,7 +2,9 @@ import React from "react";
 // Styles
 import styled from "styled-components";
 // State
-import { useAppContext } from "../appContext";
+import { useSelector } from "react-redux";
+import { selectMode } from "../app/appSlice";
+import PropTypes from "prop-types";
 // Icons
 import { Icon } from "@iconify/react";
 
@@ -37,16 +39,39 @@ const StyledSwitch = styled.label`
 `;
 // #endregion
 
+// #region functions
+const setStoredTheme = (theme) => localStorage.setItem("theme", theme);
+// #endregion
+
 // #region component
-const ThemeToggle = () => {
-  const { theme, toggleTheme, closeExpanded } = useAppContext();
+const propTypes = {
+  closeDelay: PropTypes.number,
+  setExpanded: PropTypes.func.isRequired,
+  setTheme: PropTypes.func.isRequired,
+};
+const defaultProps = { closeDelay: 250 };
+
+const ThemeToggle = ({ closeDelay, setExpanded, setTheme }) => {
+  const theme = useSelector(selectMode);
+
+  const toggleTheme = () => {
+    const themType = theme === "light" ? "dark" : "light";
+    setTheme(themType);
+    setStoredTheme(themType);
+  };
 
   return (
-    <StyledSwitch onClick={closeExpanded}>
+    <StyledSwitch
+      onClick={() => {
+        setTimeout(() => {
+          setExpanded(false);
+        }, closeDelay);
+      }}
+    >
       <input
         type="checkbox"
         aria-label={`Toggle theme, currently ${theme}.`}
-        onClick={toggleTheme}
+        onClick={() => toggleTheme()}
       />
       <div>
         {theme === "light" ? (
@@ -58,6 +83,9 @@ const ThemeToggle = () => {
     </StyledSwitch>
   );
 };
+
+ThemeToggle.propTypes = propTypes;
+ThemeToggle.defaultProps = defaultProps;
 // #endregion
 
 export default ThemeToggle;

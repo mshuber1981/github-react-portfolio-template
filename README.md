@@ -68,7 +68,7 @@ A helpful guide for Create React App deployments with GitHub Pages can be found 
 1. Update the homepage value ([package.json](https://github.com/mshuber1981/github-react-portfolio-template/blob/main/package.json#L3) line 3)
 
    ```json
-   "homepage": "https://YourUsername.github.io/your-app/",
+   "homepage": "https://YourUserName.github.io/your-repo/",
    ```
 
 2. Run the deploy command
@@ -86,6 +86,8 @@ Checkout the [Wiki](https://github.com/mshuber1981/github-react-portfolio-templa
 - [Updating the About Me section](https://github.com/mshuber1981/github-react-portfolio-template/wiki/Updating-the-About-Me-section)
 - [Updating the Skills section](https://github.com/mshuber1981/github-react-portfolio-template/wiki/Updating-the-Skills-section)
 - [Updating the Projects section](https://github.com/mshuber1981/github-react-portfolio-template/wiki/Updating-the-Projects-section)
+- [Updating the theme color](https://github.com/mshuber1981/github-react-portfolio-template/wiki/Updating-the-theme-color)
+- [Updating the Footer icons theme (light or dark)](https://github.com/mshuber1981/github-react-portfolio-template/wiki/Updating-the-Footer-icons-theme)
 
 [Back to top :top:](#a-react-portfolio-template-for-github)
 

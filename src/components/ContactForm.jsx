@@ -1,12 +1,26 @@
 import React from "react";
+// Styles
+import styled from "styled-components";
 // State
-import { useAppContext } from "../appContext";
+import { useSelector } from "react-redux";
+import { selectMode } from "../app/appSlice";
 // Components
 import { Alert, Button, Form, Spinner } from "react-bootstrap";
 // Config
 import { formspreeUrl } from "../config";
 // Util
 import { postData } from "../utils";
+
+// #region styled-components
+const StyledForm = styled.div`
+  .form-control {
+    background: ${({ theme }) =>
+      theme.name === "light"
+        ? "rgba(var(--bs-body-color-rgb), 0.03)"
+        : "var(--bs-gray-dark)"};
+  }
+`;
+// #endregion
 
 // #region component
 const ContactForm = () => {
@@ -15,7 +29,7 @@ const ContactForm = () => {
   const [success, setSuccess] = React.useState(false);
   const [danger, setDanger] = React.useState(false);
   const [dangerMessage, setDangerMessage] = React.useState(null);
-  const { theme } = useAppContext();
+  const theme = useSelector(selectMode);
 
   const handleSubmit = async (event) => {
     const form = event.currentTarget;
@@ -57,7 +71,7 @@ const ContactForm = () => {
   };
 
   return (
-    <>
+    <StyledForm>
       <Form noValidate validated={isValidated} onSubmit={handleSubmit}>
         <Form.Group className="mx-auto mb-3 form-group" controlId="name">
           <Form.Label>Name</Form.Label>
@@ -122,7 +136,7 @@ const ContactForm = () => {
           </Alert>
         </Form.Group>
       </Form>
-    </>
+    </StyledForm>
   );
 };
 // #endregion

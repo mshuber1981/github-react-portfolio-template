@@ -10,7 +10,6 @@ const TitleDiv = styled.div`
   max-width: 90vw;
   word-wrap: break-word;
   margin: 0.5rem 0;
-  font-family: "Permanent Marker";
 
   .underline {
     height: 0.25rem;
@@ -20,8 +19,8 @@ const TitleDiv = styled.div`
     margin: 0 auto 0 auto;
     background: ${({ theme }) =>
       theme.name === "light"
-        ? "linear-gradient(to left, var(--primary-light), var(--primary-dark))"
-        : "linear-gradient(to right, var(--primary-dark), var(--primary-light))"};
+        ? "linear-gradient(to right, var(--bs-primary), #D3D3D3)"
+        : "linear-gradient(to left, var(--bs-primary), var(--bs-light))"};
   }
 `;
 // #endregion
@@ -36,7 +35,11 @@ const defaultProps = { size: "h1" };
 const Title = ({ size, text }) => {
   return (
     <TitleDiv>
-      {size === "h1" ? <h1>{text}</h1> : <h2>{text}</h2>}
+      {size === "h1" ? (
+        <h1 className="title">{text}</h1>
+      ) : (
+        <h2 className="title">{text}</h2>
+      )}
       <div className="underline" />
     </TitleDiv>
   );
