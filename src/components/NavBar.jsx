@@ -1,7 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 // State
-import { useAppContext } from "../appContext";
+import { useSelector } from "react-redux";
+import { selectMode } from "../app/appSlice";
 import PropTypes from "prop-types";
 // Router
 import { Link, useLocation } from "react-router-dom";
@@ -29,30 +30,45 @@ const navLinks = {
 // #endregion
 
 // #region styled-components
-const FixedNavSpacer = styled.div`
-  height: var(--nav-height);
+const StyledDiv = styled.div`
+  .navbar {
+    border-bottom: var(--border);
+  }
+
+  .spacer {
+    height: var(--nav-height);
+  }
+
+  .logo-img {
+    background: ${({ theme }) =>
+      theme.name === "light" ? "var(--bs-dark)" : "var(--bs-light)"};
+  }
 `;
 // #endregion
 
 // #region component
 const propTypes = {
   Logo: PropTypes.node,
+  callBack: PropTypes.func,
+  closeDelay: PropTypes.number.isRequired,
 };
 const defaultProps = {
   Logo: defaultLogo,
+  closeDelay: 125,
 };
 
-const NavBar = ({ Logo }) => {
-  const { theme, isExpanded, closeExpanded, toggleExpanded } = useAppContext();
+const NavBar = ({ Logo, callBack, closeDelay }) => {
+  const theme = useSelector(selectMode);
+  const [isExpanded, setisExpanded] = React.useState(false);
   const { pathname } = useLocation();
 
   return (
-    <>
-      <FixedNavSpacer />
+    <StyledDiv>
+      <div className="spacer" />
       <Navbar
         id="nav"
         collapseOnSelect={true}
-        expand="lg"
+        expand="xl"
         expanded={isExpanded}
         bg={theme === "light" ? "light" : "dark"}
         variant={theme === "light" ? "light" : "dark"}
@@ -65,12 +81,12 @@ const NavBar = ({ Logo }) => {
               src={Logo === null ? defaultLogo : Logo}
               width="35"
               height="35"
-              className="rounded-circle"
+              className="rounded-circle logo-img"
             />
           </Navbar.Brand>
           <Navbar.Toggle
             aria-controls="responsive-navbar-nav"
-            onClick={toggleExpanded}
+            onClick={() => setisExpanded(!isExpanded)}
           />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav navbarScroll className="me-auto">
@@ -83,7 +99,11 @@ const NavBar = ({ Logo }) => {
                           spy={true}
                           activeClass="active"
                           className="nav-link"
-                          onClick={closeExpanded}
+                          onClick={() => {
+                            setTimeout(() => {
+                              setisExpanded(false);
+                            }, closeDelay);
+                          }}
                         >
                           {el.name}
                         </ScrollLink>
@@ -100,7 +120,11 @@ const NavBar = ({ Logo }) => {
                               ? "nav-link active"
                               : "nav-link"
                           }
-                          onClick={closeExpanded}
+                          onClick={() => {
+                            setTimeout(() => {
+                              setisExpanded(false);
+                            }, closeDelay);
+                          }}
                         >
                           {el.name}
                         </Link>
@@ -109,12 +133,16 @@ const NavBar = ({ Logo }) => {
                   })}
             </Nav>
             <Nav>
-              <ThemeToggle />
+              <ThemeToggle
+                closeDelay={closeDelay}
+                setExpanded={setisExpanded}
+                setTheme={callBack}
+              />
             </Nav>
           </Navbar.Collapse>
         </Container>
       </Navbar>
-    </>
+    </StyledDiv>
   );
 };
 

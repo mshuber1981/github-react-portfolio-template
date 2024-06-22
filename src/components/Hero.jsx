@@ -9,8 +9,9 @@ import { Icon } from "@iconify/react";
 import Logo from "../images/logo.svg";
 import { Light, Dark } from "../config";
 // Components
+import { useErrorBoundary } from "react-error-boundary";
 import { Link } from "react-scroll";
-import { Col, Container, Row } from "react-bootstrap";
+import { Button, Col, Container, Row } from "react-bootstrap";
 import SocialLinks from "./SocialLinks";
 
 // #region styled-components
@@ -40,8 +41,8 @@ const StyledHero = styled.header`
     height: 100%;
     background: ${({ theme }) =>
       theme.name === "light"
-        ? "linear-gradient(135deg, var(--primary), var(--bs-light))"
-        : "linear-gradient(135deg, var(--primary), var(--bs-dark))"};
+        ? "linear-gradient(135deg, var(--bs-primary), var(--bs-light))"
+        : "linear-gradient(135deg, var(--bs-primary), var(--bs-dark))"};
     z-index: -2;
   }
 
@@ -98,6 +99,8 @@ const propTypes = {
 };
 
 const Hero = ({ name }) => {
+  const { showBoundary } = useErrorBoundary();
+
   return (
     <StyledHero>
       <Container>
@@ -125,6 +128,17 @@ const Hero = ({ name }) => {
             </Link>
           </Col>
         </Row>
+        <Button
+          className="d-none"
+          onClick={() =>
+            showBoundary({
+              name: "Error",
+              message: "Simulated error message",
+            })
+          }
+        >
+          Simulate Error Boundary
+        </Button>
       </Container>
     </StyledHero>
   );

@@ -18,7 +18,7 @@ import {
 } from "react-bootstrap";
 import Loading from "../components/Loading";
 import Title from "../components/Title";
-import StyledCard from "../components/StyledCard";
+import ProjectCard from "../components/ProjectCard";
 import BackToTop from "../components/BackToTop";
 // Utils
 import { updateTitle } from "../utils";
@@ -140,42 +140,28 @@ const AllProjects = () => {
           </InputGroup>
           <Row xs={1} md={2} lg={3} className="g-4 justify-content-center row">
             {searchInput.length > 0
-              ? filteredResults.map(function ({
-                  id,
-                  image,
-                  name,
-                  description,
-                  html_url,
-                  homepage,
-                }) {
+              ? filteredResults.map((element) => {
                   return (
-                    <Col key={id}>
-                      <StyledCard
-                        image={image}
-                        name={name}
-                        description={description}
-                        url={html_url}
-                        demo={homepage}
+                    <Col key={element.id}>
+                      <ProjectCard
+                        image={element.image}
+                        name={element.name}
+                        description={element.description}
+                        url={element.html_url}
+                        demo={element.homepage}
                       />
                     </Col>
                   );
                 })
-              : filteredResults.map(function ({
-                  id,
-                  image,
-                  name,
-                  description,
-                  html_url,
-                  homepage,
-                }) {
+              : filteredResults.map((element) => {
                   return (
-                    <Col key={id}>
-                      <StyledCard
-                        image={image}
-                        name={name}
-                        description={description}
-                        url={html_url}
-                        demo={homepage}
+                    <Col key={element.id}>
+                      <ProjectCard
+                        image={element.image}
+                        name={element.name}
+                        description={element.description}
+                        url={element.html_url}
+                        demo={element.homepage}
                       />
                     </Col>
                   );

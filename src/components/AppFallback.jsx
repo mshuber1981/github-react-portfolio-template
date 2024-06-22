@@ -4,15 +4,15 @@ import PropTypes from "prop-types";
 // Components
 import { Container } from "react-bootstrap";
 // Utils
-// import { getPreferredTheme, setTheme } from "../util";
+import { getPreferredTheme, setTheme } from "../utils";
 
 // #region component
 const propTypes = { error: PropTypes.object.isRequired };
 
 const AppFallback = ({ error }) => {
-  //   React.useEffect(() => {
-  //     setTheme(getPreferredTheme());
-  //   }, []);
+  React.useEffect(() => {
+    setTheme(getPreferredTheme());
+  }, []);
 
   return (
     <main className="d-flex flex-column vh-100 justify-content-center align-items-center">

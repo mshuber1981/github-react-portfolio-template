@@ -13,26 +13,48 @@ import { Card } from "react-bootstrap";
 // #region styled-components
 const StyledCard = styled.div`
   .card {
-    color: ${({ theme }) => theme.color};
-    background: ${({ theme }) => (theme.name === "light" ? "" : "#797B7B")};
+    height: var(--card-height);
+    border: var(--border);
+    transition: all 0.2s ease-in-out;
+    background: ${({ theme }) =>
+      theme.name === "light" ? "" : "var(--bs-gray)"};
     box-shadow: ${({ theme }) =>
       theme.name === "light"
         ? "0 3px 10px rgb(0 0 0 / 0.2)"
         : "0 3px 10px rgb(255 255 255 / 0.2)"};
 
+    .card-img-top {
+      height: 50%;
+      object-fit: contain;
+    }
+
     .card-link {
       text-decoration: none;
       font-size: 1.5rem;
-      color: ${({ theme }) => theme.color};
 
       &:hover {
-        color: var(--primary);
+        color: ${({ theme }) =>
+          theme.name === "light" ? "var(--bs-dark)" : "var(--bs-light)"};
       }
     }
 
     .card-footer {
       border-top: var(--border);
-      background: ${({ theme }) => (theme.name === "light" ? "" : "#404040")};
+      background: ${({ theme }) =>
+        theme.name === "light" ? "" : "var(--bs-gray-dark)"};
+
+      .card-link {
+        color: ${({ theme }) =>
+          theme.name === "light" ? "var(--bs-dark)" : "var(--bs-light)"};
+
+        &:hover {
+          color: var(--bs-primary);
+        }
+      }
+    }
+
+    &:hover {
+      transform: scale(1.03);
     }
   }
 `;

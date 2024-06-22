@@ -1,6 +1,7 @@
 import React from "react";
 // State
-import { useAppContext } from "../appContext";
+import { useSelector } from "react-redux";
+import { selectMode } from "../app/appSlice";
 // Components
 import { Element } from "react-scroll";
 import { Button, Col, Container, Row } from "react-bootstrap";
@@ -10,7 +11,7 @@ import { skillData, resume } from "../config";
 
 // #region component
 const Skills = () => {
-  const { theme } = useAppContext();
+  const theme = useSelector(selectMode);
 
   return (
     <Element name={"Skills"} id="skills">

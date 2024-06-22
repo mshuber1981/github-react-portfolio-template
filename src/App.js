@@ -2,8 +2,8 @@ import React from "react";
 // Styles
 import { ThemeProvider } from "styled-components";
 // State
-import { useAppContext } from "./appContext";
 import { useDispatch, useSelector } from "react-redux";
+import { selectMode, setMode } from "./app/appSlice";
 import {
   setProjects,
   setMainProjects,
@@ -28,23 +28,9 @@ import { Container } from "react-bootstrap";
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
 // Config
-import { navLogo } from "./config";
-
-// #region constants
-const darkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
-const themes = {
-  light: {
-    name: "light",
-    color: "#45413C",
-    background: "#F5F2E8",
-  },
-  dark: {
-    name: "dark",
-    color: "#FBFDFF",
-    background: "#27272A",
-  },
-};
-// #endregion
+import { footerTheme, navLogo } from "./config";
+// Util
+import { getStoredTheme, getPreferredTheme, setTheme } from "./utils";
 
 // #region component
 const propTypes = {
@@ -62,7 +48,7 @@ const defaultProps = {
 };
 
 const App = ({ projectCardImages, filteredProjects }) => {
-  const { theme, setTheme } = useAppContext();
+  const theme = useSelector(selectMode);
   const projects = useSelector(selectProjects);
   const dispatch = useDispatch();
   const { isLoading, isSuccess, isError, error } = useGetUsersQuery();
@@ -124,16 +110,32 @@ const App = ({ projectCardImages, filteredProjects }) => {
     }
   }, [projects, filteredProjects, dispatch]);
 
+  // Theme
+  const setThemes = React.useCallback(
+    (theme) => {
+      if (theme) {
+        dispatch(setMode(theme));
+        setTheme(theme);
+      } else {
+        dispatch(setMode(getPreferredTheme()));
+        setTheme(getPreferredTheme());
+      }
+    },
+    [dispatch]
+  );
+
   React.useEffect(() => {
-    const updateTheme = () => (darkMode ? setTheme("dark") : setTheme("light"));
-    updateTheme();
-  }, [setTheme]);
+    setThemes();
+  }, [setThemes]);
 
   window
     .matchMedia("(prefers-color-scheme: dark)")
-    .addEventListener("change", (e) =>
-      e.matches ? setTheme("dark") : setTheme("light")
-    );
+    .addEventListener("change", () => {
+      const storedTheme = getStoredTheme();
+      if (storedTheme !== "light" && storedTheme !== "dark") {
+        setThemes();
+      }
+    });
 
   if (isLoading) {
     content = (
@@ -145,14 +147,14 @@ const App = ({ projectCardImages, filteredProjects }) => {
     content = (
       <>
         <Element name={"Home"} id="home">
-          <NavBar Logo={navLogo} />
+          <NavBar Logo={navLogo} callBack={(theme) => setThemes(theme)} />
         </Element>
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route path="/All-Projects" element={<AllProjects />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
-        <Footer />
+        <Footer mode={footerTheme} />
       </>
     );
   } else if (isError) {
@@ -169,8 +171,9 @@ const App = ({ projectCardImages, filteredProjects }) => {
 
   return (
     <ErrorBoundary FallbackComponent={AppFallback}>
-      <HashRouter>
-        <ThemeProvider theme={themes[theme]}>
+      {/* https://reactrouter.com/en/main/router-components/hash-router#future */}
+      <HashRouter future={{ v7_startTransition: true }}>
+        <ThemeProvider theme={{ name: theme }}>
           <ScrollToTop />
           <GlobalStyles />
           {content}

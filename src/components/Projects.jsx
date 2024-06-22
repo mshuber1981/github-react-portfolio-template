@@ -1,7 +1,7 @@
 import React from "react";
 // State
-import { useAppContext } from "../appContext";
 import { useSelector } from "react-redux";
+import { selectMode } from "../app/appSlice";
 import { selectProjects, selectMainProjects } from "../app/projectsSlice";
 import { useGetProjectsQuery } from "../app/apiSlice";
 // Router
@@ -17,7 +17,7 @@ import ProjectCard from "./ProjectCard";
 
 // #region component
 const Projects = () => {
-  const { theme } = useAppContext();
+  const theme = useSelector(selectMode);
   const projects = useSelector(selectProjects);
   const mainProjects = useSelector(selectMainProjects);
   const { isLoading, isSuccess, isError, error } = useGetProjectsQuery();

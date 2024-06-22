@@ -7,11 +7,7 @@ Variables
 ===============
 */
 :root {
-  --primary-light: #b0edfd;
-  /* Primary Color */
-  --primary: #61DBFB;
-  --primary-dark: #316e7e;
-  --border: 1px solid #61DBFB;
+  --border: 1px solid var(--bs-primary);
   --transition: all 0.3s linear;
   --nav-height: 55px;
   --min-footer-height: 11vh;
@@ -23,41 +19,12 @@ Variables
 Global Styles
 ===============
 */
-body {
-  background: ${({ theme }) => theme.background};
-  color: ${({ theme }) => theme.color};
-}
-
 main {
   min-height: calc(100vh - 2 * var(--nav-height) - 2rem);
 }
 
 section {
   margin: 1rem 0;
-}
-
-a:hover {
-  cursor: pointer;
-}
-
-.navbar {
-  border-bottom: var(--border);
-
-  img {
-    background: ${({ theme }) =>
-      theme.name === "light" ? "#45413C" : "#797B7B"};
-  }
-}
-
-.link-icons {
-  line-height: 0;
-  font-size: 2.25rem;
-  transition: var(--transition);
-  color: ${({ theme }) => theme.color};
-
-  &:hover {
-        color: var(--primary);
-      }
 }
 
 .section {
@@ -67,27 +34,30 @@ a:hover {
   padding: var(--nav-height) 0;
 }
 
-.title {
-    font-family: "Permanent Marker";
+a:hover {
+  cursor: pointer;
 }
 
-.card {
-  height: var(--card-height);
-  border: var(--border);
-  transition: all .2s ease-in-out;
-  &:hover {
-    transform: scale(1.03);
-  }
+.title {
+  font-family: "Permanent Marker";
+}
 
-  .card-img-top {
-    height: 50%;
-    object-fit: contain;
+.link-icons {
+  line-height: 0;
+  font-size: 2.25rem;
+  margin: 0 1rem;
+  color: ${({ theme }) =>
+    theme.name === "light" ? "var(--bs-dark)" : "var(--bs-light)"};
+
+  &:hover {
+    color: ${({ theme }) =>
+      theme.name === "light" ? "var(--bs-light)" : "var(--bs-dark)"};
   }
 }
 
 .page-item.active .page-link {
-    background-color: var(--primary);
-    border-color: var(--primary);
+  background-color: var(--bs-primary);
+  border-color: var(--bs-primary);
 }
 
 @media screen and (min-width: 800px) {
@@ -99,9 +69,9 @@ a:hover {
     }
 }
 
- @media screen and (min-width: 1367px) {
+@media screen and (min-width: 1367px) {
   .link-icons:hover {
-    color: var(--primary);
+    color: var(--bs-primary);
   }
   }
 `;
