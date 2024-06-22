@@ -4,8 +4,6 @@
 	http://jedwatson.github.io/classnames
 */
 
-/*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/facebook/regenerator/blob/main/LICENSE */
-
 /**
  * @license React
  * react-dom.production.min.js
@@ -57,7 +55,7 @@
  */
 
 /**
- * @remix-run/router v1.15.0
+ * @remix-run/router v1.16.1
  *
  * Copyright (c) Remix Software Inc.
  *
@@ -68,7 +66,7 @@
  */
 
 /**
- * React Router DOM v6.22.0
+ * React Router DOM v6.23.1
  *
  * Copyright (c) Remix Software Inc.
  *
@@ -79,7 +77,7 @@
  */
 
 /**
- * React Router v6.22.0
+ * React Router v6.23.1
  *
  * Copyright (c) Remix Software Inc.
  *

@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/github-react-portfolio-template/static/css/main.63ffa884.css",
-    "main.js": "/github-react-portfolio-template/static/js/main.ebbcb9ee.js",
+    "main.css": "/github-react-portfolio-template/static/css/main.372dc58a.css",
+    "main.js": "/github-react-portfolio-template/static/js/main.a9ed4288.js",
     "static/media/hero-dark.jpg": "/github-react-portfolio-template/static/media/hero-dark.37f2556d620821979e99.jpg",
     "static/media/hero-light.jpg": "/github-react-portfolio-template/static/media/hero-light.78b77836d8aee4d7d3cb.jpg",
     "service-worker.js": "/github-react-portfolio-template/service-worker.js",
@@ -13,11 +13,11 @@
     "static/media/free-code-camp.svg": "/github-react-portfolio-template/static/media/free-code-camp.5c752c920cb2997a1d007df7f606e57a.svg",
     "static/media/form-line.svg": "/github-react-portfolio-template/static/media/form-line.d2b8e8202f33bafeab14b05ac7b883ed.svg",
     "static/media/aws-amplify.svg": "/github-react-portfolio-template/static/media/aws-amplify.d635c57baa8bc45588540c2d9205afa0.svg",
-    "main.63ffa884.css.map": "/github-react-portfolio-template/static/css/main.63ffa884.css.map",
-    "main.ebbcb9ee.js.map": "/github-react-portfolio-template/static/js/main.ebbcb9ee.js.map"
+    "main.372dc58a.css.map": "/github-react-portfolio-template/static/css/main.372dc58a.css.map",
+    "main.a9ed4288.js.map": "/github-react-portfolio-template/static/js/main.a9ed4288.js.map"
   },
   "entrypoints": [
-    "static/css/main.63ffa884.css",
-    "static/js/main.ebbcb9ee.js"
+    "static/css/main.372dc58a.css",
+    "static/js/main.a9ed4288.js"
   ]
 }
