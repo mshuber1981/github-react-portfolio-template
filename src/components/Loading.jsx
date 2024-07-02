@@ -14,7 +14,7 @@ const Loading = styled.div`
   height: 5rem;
   border: 5px solid;
   border-radius: 50%;
-  border-top-color: var(--primary);
+  border-top-color: var(--bs-primary);
   margin: 1rem auto;
   animation: ${spin} 0.6s linear infinite;
 `;
