@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/github-react-portfolio-template/static/css/main.372dc58a.css",
-    "main.js": "/github-react-portfolio-template/static/js/main.a9ed4288.js",
-    "static/media/hero-dark.jpg": "/github-react-portfolio-template/static/media/hero-dark.37f2556d620821979e99.jpg",
-    "static/media/hero-light.jpg": "/github-react-portfolio-template/static/media/hero-light.78b77836d8aee4d7d3cb.jpg",
-    "service-worker.js": "/github-react-portfolio-template/service-worker.js",
-    "static/media/GH.svg": "/github-react-portfolio-template/static/media/GH.b9e9a9aa6f05e9dfe5dcb8991bda3e4d.svg",
-    "static/media/defaultNavLogo.svg": "/github-react-portfolio-template/static/media/defaultNavLogo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
-    "static/media/logo.svg": "/github-react-portfolio-template/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
-    "static/media/gears.svg": "/github-react-portfolio-template/static/media/gears.ea01b7f9c70f986167623fd40e054f7f.svg",
-    "index.html": "/github-react-portfolio-template/index.html",
-    "static/media/free-code-camp.svg": "/github-react-portfolio-template/static/media/free-code-camp.5c752c920cb2997a1d007df7f606e57a.svg",
-    "static/media/form-line.svg": "/github-react-portfolio-template/static/media/form-line.d2b8e8202f33bafeab14b05ac7b883ed.svg",
-    "static/media/aws-amplify.svg": "/github-react-portfolio-template/static/media/aws-amplify.d635c57baa8bc45588540c2d9205afa0.svg",
-    "main.372dc58a.css.map": "/github-react-portfolio-template/static/css/main.372dc58a.css.map",
-    "main.a9ed4288.js.map": "/github-react-portfolio-template/static/js/main.a9ed4288.js.map"
+    "main.css": "/your-repo/static/css/main.372dc58a.css",
+    "main.js": "/your-repo/static/js/main.546e16b6.js",
+    "static/media/hero-dark.jpg": "/your-repo/static/media/hero-dark.37f2556d620821979e99.jpg",
+    "static/media/hero-light.jpg": "/your-repo/static/media/hero-light.78b77836d8aee4d7d3cb.jpg",
+    "service-worker.js": "/your-repo/service-worker.js",
+    "static/media/GH.svg": "/your-repo/static/media/GH.b9e9a9aa6f05e9dfe5dcb8991bda3e4d.svg",
+    "static/media/defaultNavLogo.svg": "/your-repo/static/media/defaultNavLogo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "static/media/logo.svg": "/your-repo/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "static/media/gears.svg": "/your-repo/static/media/gears.ea01b7f9c70f986167623fd40e054f7f.svg",
+    "static/media/free-code-camp.svg": "/your-repo/static/media/free-code-camp.5c752c920cb2997a1d007df7f606e57a.svg",
+    "index.html": "/your-repo/index.html",
+    "static/media/form-line.svg": "/your-repo/static/media/form-line.d2b8e8202f33bafeab14b05ac7b883ed.svg",
+    "static/media/aws-amplify.svg": "/your-repo/static/media/aws-amplify.d635c57baa8bc45588540c2d9205afa0.svg",
+    "main.372dc58a.css.map": "/your-repo/static/css/main.372dc58a.css.map",
+    "main.546e16b6.js.map": "/your-repo/static/js/main.546e16b6.js.map"
   },
   "entrypoints": [
     "static/css/main.372dc58a.css",
-    "static/js/main.a9ed4288.js"
+    "static/js/main.546e16b6.js"
   ]
 }
