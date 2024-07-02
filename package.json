@@ -1,7 +1,7 @@
 {
   "name": "github-react-portfolio-template",
   "homepage": "https://YourUserName.github.io/your-repo/",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": true,
   "dependencies": {
     "@iconify/react": "^4.1.0",
