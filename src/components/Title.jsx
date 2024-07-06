@@ -30,9 +30,8 @@ const propTypes = {
   size: PropTypes.oneOf(["h1", "h2"]),
   text: PropTypes.string.isRequired,
 };
-const defaultProps = { size: "h1" };
 
-const Title = ({ size, text }) => {
+const Title = ({ size = "h1", text }) => {
   return (
     <TitleDiv>
       {size === "h1" ? (
@@ -46,7 +45,6 @@ const Title = ({ size, text }) => {
 };
 
 Title.propTypes = propTypes;
-Title.defaultProps = defaultProps;
 // #endregion
 
 export default Title;

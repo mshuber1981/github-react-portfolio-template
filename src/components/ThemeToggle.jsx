@@ -49,9 +49,8 @@ const propTypes = {
   setExpanded: PropTypes.func.isRequired,
   setTheme: PropTypes.func.isRequired,
 };
-const defaultProps = { closeDelay: 250 };
 
-const ThemeToggle = ({ closeDelay, setExpanded, setTheme }) => {
+const ThemeToggle = ({ closeDelay = 250, setExpanded, setTheme }) => {
   const theme = useSelector(selectMode);
 
   const toggleTheme = () => {
@@ -85,7 +84,6 @@ const ThemeToggle = ({ closeDelay, setExpanded, setTheme }) => {
 };
 
 ThemeToggle.propTypes = propTypes;
-ThemeToggle.defaultProps = defaultProps;
 // #endregion
 
 export default ThemeToggle;

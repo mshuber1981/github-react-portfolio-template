@@ -28,11 +28,8 @@ const StyledDiv = styled.div`
 
 // #region component
 const propTypes = { home: PropTypes.string };
-const defaultProps = {
-  home: "Home",
-};
 
-const BackToTop = ({ home }) => {
+const BackToTop = ({ home = "Home" }) => {
   const [scrollYNum, setScrollYNum] = React.useState(null);
   const up = React.useRef(null);
 
@@ -60,7 +57,6 @@ const BackToTop = ({ home }) => {
 };
 
 BackToTop.propTypes = propTypes;
-BackToTop.defaultProps = defaultProps;
 // #endregion
 
 export default BackToTop;

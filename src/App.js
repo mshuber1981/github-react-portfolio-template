@@ -42,12 +42,8 @@ const propTypes = {
     })
   ),
 };
-const defaultProps = {
-  filteredProjects: [],
-  projectCardImages: [],
-};
 
-const App = ({ projectCardImages, filteredProjects }) => {
+const App = ({ projectCardImages = [], filteredProjects = [] }) => {
   const theme = useSelector(selectMode);
   const projects = useSelector(selectProjects);
   const dispatch = useDispatch();
@@ -184,7 +180,6 @@ const App = ({ projectCardImages, filteredProjects }) => {
 };
 
 App.propTypes = propTypes;
-App.defaultProps = defaultProps;
 // #endregion
 
 export default App;
