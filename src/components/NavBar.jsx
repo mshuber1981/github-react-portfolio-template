@@ -50,14 +50,10 @@ const StyledDiv = styled.div`
 const propTypes = {
   Logo: PropTypes.node,
   callBack: PropTypes.func,
-  closeDelay: PropTypes.number.isRequired,
-};
-const defaultProps = {
-  Logo: defaultLogo,
-  closeDelay: 125,
+  closeDelay: PropTypes.number,
 };
 
-const NavBar = ({ Logo, callBack, closeDelay }) => {
+const NavBar = ({ Logo = defaultLogo, callBack, closeDelay = 125 }) => {
   const theme = useSelector(selectMode);
   const [isExpanded, setisExpanded] = React.useState(false);
   const { pathname } = useLocation();
@@ -147,7 +143,6 @@ const NavBar = ({ Logo, callBack, closeDelay }) => {
 };
 
 NavBar.propTypes = propTypes;
-NavBar.defaultProps = defaultProps;
 // #endregion
 
 export default NavBar;
