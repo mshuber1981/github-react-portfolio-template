@@ -30,7 +30,7 @@ Add your GitHub username once and all of your info will automatically be updated
    ```
 
 5. Navigate to the src directory and open src/config.js
-6. Add your GitHub username ([config.js](https://github.com/mshuber1981/github-react-portfolio-template/blob/main/src/config.js#L18) line 18)
+6. Add your GitHub username ([src/config.js](https://github.com/mshuber1981/github-react-portfolio-template/blob/main/src/config.js#L18) line 18)
 
    ```javascript
    /* START HERE
@@ -50,7 +50,7 @@ Add your GitHub username once and all of your info will automatically be updated
 
 ![Projects](/README_images/contact.png)
 
-1. The contact form uses [Formspree](https://formspree.io/), create an account and add your endpoint URL ([config.js](https://github.com/mshuber1981/github-react-portfolio-template/blob/main/src/config.js#L114) line 114)
+1. The contact form uses [Formspree](https://formspree.io/), create an account and add your endpoint URL ([src/config.js](https://github.com/mshuber1981/github-react-portfolio-template/blob/main/src/config.js#L114) line 114)
 
    ```javascript
    /* Contact Info
