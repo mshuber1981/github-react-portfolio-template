@@ -46,16 +46,16 @@
 
 /**
  * @license React
- * use-sync-external-store-with-selector.production.min.js
+ * use-sync-external-store-with-selector.production.js
  *
- * Copyright (c) Facebook, Inc. and its affiliates.
+ * Copyright (c) Meta Platforms, Inc. and affiliates.
  *
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  */
 
 /**
- * @remix-run/router v1.17.0
+ * @remix-run/router v1.21.0
  *
  * Copyright (c) Remix Software Inc.
  *
@@ -66,7 +66,7 @@
  */
 
 /**
- * React Router DOM v6.24.0
+ * React Router DOM v6.28.1
  *
  * Copyright (c) Remix Software Inc.
  *
@@ -77,7 +77,7 @@
  */
 
 /**
- * React Router v6.24.0
+ * React Router v6.28.1
  *
  * Copyright (c) Remix Software Inc.
  *
