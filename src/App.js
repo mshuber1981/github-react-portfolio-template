@@ -167,8 +167,9 @@ const App = ({ projectCardImages = [], filteredProjects = [] }) => {
 
   return (
     <ErrorBoundary FallbackComponent={AppFallback}>
-      {/* https://reactrouter.com/en/main/router-components/hash-router#future */}
-      <HashRouter future={{ v7_startTransition: true }}>
+      {/* https://reactrouter.com/6.28.0/upgrading/future#v7_starttransition */}
+      {/* https://reactrouter.com/6.28.0/upgrading/future#v7_relativesplatpath */}
+      <HashRouter future={{ v7_startTransition: true, v7_relativeSplatPath: true, }}>
         <ThemeProvider theme={{ name: theme }}>
           <ScrollToTop />
           <GlobalStyles />
